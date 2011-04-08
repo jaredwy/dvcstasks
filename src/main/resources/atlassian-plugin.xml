@@ -4,8 +4,12 @@
         <version>${project.version}</version>
         <vendor name="${project.organization.name}" url="${project.organization.url}" />
     </plugin-info>
-
-    <servlet name="dvcstasks" class="com.atlassian.bamboo.plugins.ExampleServlet" key="test">
-        <url-pattern>/test</url-pattern>
-    </servlet>
+    
+    <taskType key="gitBranchTask" name="GitBranch" class="com.atlassian.bamboo.plugins.dvcstasks.GitBranch">
+        <description>Branches a git repok</description>
+        <category name="builder"/>
+        <configuration class="com.atlassian.bamboo.plugins.dvcstasks.GitBranch"/>
+        <resource type="freemarker" name="edit" location="com/atlassian/bamboo/plugins/dvcstasks/GitBranchConfig.ftl"/>
+       <resource type="freemarker" name="view" location="com/atlassian/bamboo/plugins/grails/GitBranchView.ftl"/>
+    </taskType>
 </atlassian-plugin>
