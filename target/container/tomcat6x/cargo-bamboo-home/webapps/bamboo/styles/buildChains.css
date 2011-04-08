@@ -1,0 +1,559 @@
+.chainStructureSummary {
+    margin-right: 355px;
+}
+.result-summary {
+    clear: both;
+    overflow: hidden;
+}
+.result-summary > .details {
+    float: left;
+    padding: 0;
+    width: 49.5%;
+}
+.result-summary > .details dl {
+    margin: 0 0 1.25em;
+    overflow: hidden;
+    padding-left: 10em;
+}
+.result-summary > .details dl > dt {
+    color: #505050;
+    float: left;
+    margin-left: -10em;
+    padding-right: 1em;
+    text-align: right;
+    width: 9em;
+}
+.result-summary > .details dl > dd {
+    margin-bottom: 0.75em;
+}
+.result-summary > .details dl .icon {
+    vertical-align: text-bottom;
+}
+.result-summary > .details .status + dd + .status {
+    display: none;
+}
+.result-summary > .details .completed + dd span,
+.result-summary > .details .queued + dd span,
+.result-summary > .details .successful-since + dd span,
+.result-summary > .details .first-to-pass-since + dd span,
+.result-summary > .details .failing-since + dd span,
+.result-summary > .details .fixed-in + dd span {
+    color: #505050;
+}
+.result-summary > .details .duration + dd > span {
+    border-bottom: 1px dashed #bbb;
+    cursor: pointer;
+}
+.result-summary #buildResultsSummary {
+    display: block;
+    margin: 0 0 15px;
+}
+.result-summary #buildResultsSummary #buildResults {
+    display: block;
+    float: none;
+    width: auto;
+}
+
+.result-summary > .variables dl {
+    margin: 0 0 1.25em;
+    overflow: hidden;
+    width: 100%;
+}
+.result-summary > .variables dt {
+    clear: left;
+    color: #505050;
+    float: left;
+    padding-right: 1em;
+    text-align: right;
+    width: 33%;
+}
+.result-summary > .variables dd {
+    float: left;
+    margin-bottom: 1em;
+}
+
+#shared-artifacts > ul {
+    list-style: none;
+}
+#shared-artifacts li,
+#shared-artifacts > p {
+    margin-left: 16px;
+}
+#shared-artifacts .icon {
+    margin-right: 4px;
+}
+#shared-artifacts span {
+    color: #505050;
+}
+#shared-artifacts .filesize {
+    font-size: 0.92em;
+    margin-left: 0.35em;
+}
+#shared-artifacts,
+.result-summary .test-summary {
+    margin-bottom: 2em;
+}
+.result-summary .test-summary > .toolbar > span {
+    color: #505050;
+}
+.result-summary .test-summary ul {
+    list-style: none;
+    margin: 15px 10px 0;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+.result-summary .test-summary li {
+    float: left;
+    font-size: 3em;
+    font-weight: bold;
+    line-height: 1;
+    margin: 0 0 0 0.5%;
+    width: 33%;
+}
+.result-summary .test-summary li:first-child {
+    margin: 0;
+}
+.result-summary .test-summary a {
+    text-decoration: none;
+}
+.result-summary .test-summary .new-failures a,
+.result-summary .test-summary .existing-failures a {
+    color: #a00;
+}
+.result-summary .test-summary .fixed a {
+    color: #000;
+}
+.result-summary .test-summary .new-failures a:hover,
+.result-summary .test-summary .existing-failures a:hover,
+.result-summary .test-summary .fixed a:hover {
+    color: #326ca6;
+}
+.result-summary .test-summary > ul span {
+    color: #7a7a7a;
+    display: block;
+    font-size: 0.306em;
+    font-weight: normal;
+    line-height: 1.2;
+    margin-top: 0.1em;
+}
+.result-summary .test-summary a:hover span {
+    color: #326ca6;
+    text-decoration: underline;
+}
+.result-summary > .stages,
+.result-summary > .comments,
+.result-summary > .variables,
+.result-summary > .changesSummary,
+.result-summary > .issueSummary {
+    clear: right;
+    float: right;
+    margin: 0 0 2em;
+    padding: 0;
+    width: 49.5%;
+}
+
+.result-summary > .stages > h2,
+.chainStructureSummary > h2 {
+    margin-bottom: 1em;
+}
+
+.stageList {
+    list-style: none;
+    margin: 0;
+}
+.stageList > li {
+    background: #fff;
+    border: 1px solid #d2d2d2;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    margin: 0 0 21px;
+    position: relative;
+}
+.stageList > li > div {
+    border-left: 8px solid #d2d2d2;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+}
+.stageList > .Successful > div {
+    border-left: 8px solid #070;
+}
+.stageList > .Failed > div {
+    border-left: 8px solid #c00;
+}
+.stageList > .NotBuilt > div {
+    border-left: 8px solid #ccc;
+}
+.stageList > .InProgress > div,
+.stageList > .Pending > div {
+    border-left: 8px solid #07c;
+}
+
+.stageList .jobError {
+    color: #c00;
+    float: right;
+}
+
+.stageList .noMatchingAgent {
+    color: #c00;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.stageList > li > div > dl {
+    background: #f0f0f0;
+    -moz-border-radius-topright: 2px;
+    -webkit-border-top-right-radius: 2px;
+    border-top-right-radius: 2px;
+    color: #000;
+    margin: 0;
+    overflow: hidden;
+    padding: 10px 15px;
+}
+.stageList > .collapsed > div > dl {
+    -moz-border-radius-bottomright: 2px;
+    -webkit-border-bottom-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+.stageList > li > div > dl > dt {
+    background: url(../../../images/jt/icn_collapse.gif) no-repeat 0 0;
+    cursor: pointer;
+    float: left;
+    font-weight: bold;
+    padding-left: 16px;
+}
+.stageList > .collapsed > div > dl > dt {
+    background: url(../../../images/jt/icn_expand.gif) no-repeat 0 0;
+}
+.stageList > .not-collapsible > div > dl > dt {
+    background: transparent;
+    cursor: default;
+    padding: 0;
+}
+.stageList > li > div > dl > dt > span {
+    color: #666;
+    font-weight: normal;
+    margin-left: 5px;
+}
+.stageList > li > div > dl > dd {
+    float: right;
+}
+.stageList div > ul {
+    border-top: 1px solid #d2d2d2;
+    list-style: none;
+    margin: 0;
+    overflow: hidden;
+}
+.stageList .collapsed ul {
+    display: none;
+}
+.stageList > li > div > ul > li {
+    border-bottom: 1px solid #d2d2d2;
+    border-top: 1px solid #d2d2d2;
+    margin: 0 0 -1px;
+    overflow: hidden;
+    padding: 8px 15px 8px 30px;
+    position: relative;
+}
+.stageList .Pending,
+.stageList .Queued,
+.stageList .InProgress {
+    background: #ebf1f7;
+}
+.stageList a.job,
+.stageList a.configure {
+    float: left;
+    min-height: 15px;
+    position: relative;
+    text-decoration: none;
+    z-index: 1;
+}
+.stageList a.job:hover,
+.stageList a.configure:hover {
+    text-decoration: underline;
+}
+.stageList ul dl {
+    color: #333;
+    float: right;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+.stageList ul dl > dt {
+    color: #727272;
+    float: left;
+    margin: 0 0.3em 0 1em;
+    text-align: right;
+}
+.stageList ul dl > dt:after {
+    content: ":";
+}
+.stageList ul dl > dd {
+    float: left;
+    white-space: nowrap;
+    width: 9em;
+}
+.stageList ul dl > dd.duration {
+    width: 7em;
+}
+.stageList > li > div.arrow {
+    background: #d2d2d2 url(../../../images/stage-separator.gif) no-repeat 50% 0;
+    border: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    bottom: -22px;
+    height: 21px;
+    left: 50%;
+    margin-left: -20px;
+    position: absolute;
+    width: 41px;
+}
+.stageList > li.last > div.arrow,
+.stageList > li.ui-sortable-helper > div.arrow {
+    display: none;
+}
+.stageList > li:last-child > div.arrow { /* on its own line because IE8 won't parse any additional rules once hitting the :last-child selector */
+    display: none;
+}
+.stageList .progress {
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.stageList .progress > .progress-bar {
+    background: #fff url(../../../images/job-progress-bar-bg.png) repeat-y 100% 0;
+    padding-right: 10px;
+}
+.stageList .progress > .progress-text {
+    color: #4a4a4a;
+    float: right;
+    min-height: 15px;
+    padding: 8px 40px 8px 0;
+    text-align: right;
+}
+
+/* Stage Configuration */
+#editstages > li > div,
+#editstages > li > div > ul,
+#editstages > li > div > ul > li {
+    overflow: visible;
+}
+.stageList .ui-droppable {
+    min-height: 33px;
+}
+.stageList .ui-droppable > li:hover {
+    background: #fafafa;
+}
+.stageList.ui-sortable > li > div > dl > dt {
+    background: url(../../../images/handle.png) no-repeat 0 50%;
+    padding-left: 15px;
+}
+.stageList.ui-sortable dl,
+.stageList.ui-sortable > li > div > dl > dt {
+    cursor: move;
+}
+#editstages a.job {
+    float: none;
+}
+.stageList > li > div > dl > dd > .actions {
+    list-style: none;
+    margin: 0;
+    position: absolute;
+    right: 5px;
+    top: 8px;
+    z-index: 100;
+}
+.stageList > li > div > ul > li > .actions {
+    float: right;
+    list-style: none;
+    margin: 0;
+}
+.stageList > li > div > dl > dd > .actions > li {
+    background: url(../../../images/menu_indicator_for_light_backgrounds.gif) no-repeat 20px 50%;
+    margin: 0;
+}
+.stageList > li > div > dl > dd > .actions.active > li,
+.stageList > li > div > dl > dd > .actions > li:hover {
+    background: #326ca6 url(../../../images/menu_indicator_for_dark_backgrounds.gif) no-repeat 20px 50%;
+}
+.stageList > li > div > dl > dd > .actions li > span {
+    background: url(../../../images/icons/tools_12.png) no-repeat 6px 50%;
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    padding: 0 16px 0 6px;
+    text-indent: -9999px;
+    width: 12px;
+}
+.stageList .actions ul {
+    margin: 0;
+}
+.stageList .actions li {
+    margin: 0;
+}
+.stageList .actions ul a {
+    display: block;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.stageList .actions ul a:hover {
+    text-decoration: underline;
+}
+.stageList a.configure,
+.stageList a.enableDisable{
+    float: right;
+}
+.stageList > li > div > ul > li > .actions > li > a {
+    text-decoration: none;
+}
+.stageList > li > div > ul > li > .actions > li > a:hover {
+    text-decoration: underline;
+}
+.stageList .actions .icon-drop {
+    background: url(../../../images/menu_indicator_for_light_backgrounds_lighter.gif) no-repeat 50% 50%;
+}
+.stageList .actions .icon-drop:hover,
+.stageList .actions.active .icon-drop {
+    background: #326ca6 url(../../../images/menu_indicator_for_dark_backgrounds.gif) no-repeat 50% 50%;
+}
+
+.stageList .builder {
+    color: #666;
+    float: left;
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin-left: 0.4em;
+    overflow: hidden;
+}
+.stageList .builder dt {
+    position: absolute;
+    left: -9999px;
+}
+.stageList .builder dd {
+    width: auto;
+}
+.stageList .builder .noAgentInfo {
+    float: right;
+    font-weight: bold;
+}
+.stageList .create-job {
+    font-weight: bold;
+    padding-left: 0;
+    padding-right: 0;
+}
+.stageList .create-job > a {
+    background: url(../../../images/jt/create_12.png) no-repeat 3px 50%;
+    margin-left: 10px;
+    padding-left: 20px;
+    text-decoration: none;
+}
+.stageList .create-job > a:hover {
+    text-decoration: underline;
+}
+.stageList .ui-droppable .handle {
+    background: url(../../../images/handle.png) no-repeat 15px 50%;
+    cursor: move;
+    height: 80%;
+    left: 0;
+    position: absolute;
+    top: 10%;
+    width: 30px;
+}
+
+.stageList ul.ui-state-active {
+    background: #f5f8fb;
+}
+.stageList ul.ui-state-hover {
+    background: #e1eefa;
+}
+
+.stageList > .ui-sortable-placeholder {
+    background: #f5f8fb;
+    border: 2px dashed #bbb;
+    margin: 0 0 20px;
+    visibility: visible !important;
+}
+.stageList ul > .ui-draggable-dragging {
+    background: #fff !important;
+    border: 1px solid #d2d2d2 !important;
+    z-index: 1000;
+}
+
+#planDetailsSummary {
+    clear: left;
+    float: left;
+    width: 100%;
+}
+
+#buildSummary h2 {
+    margin-bottom: 5px;
+}
+
+#buildSummary .toolbar {
+    padding-top: 9px;
+}
+
+#planSummaryGraphs {
+    margin-top: 5px;
+}
+
+#planSummaryGraphs {
+    clear: both;
+    width: 345px;
+    float: right;
+}
+
+#planSummaryGraphs img {
+    margin-bottom: 10px;
+}
+
+#planStatsSummary {
+    float: right;
+    margin-right: -360px;
+    width: 345px;
+}
+
+#planDetailsSummary > .details {
+    float: none;
+    width: auto;
+}
+
+#planDetailsSummary #liveActivity {
+    padding-bottom: 10px;
+}
+
+#stageListSummary .stageList {
+    margin-left: 0;
+}
+
+.history-permalinks {
+    list-style: none;
+    overflow: hidden;
+}
+.history-permalinks > li {
+    float: left;
+    margin: 0 16px 0 0;
+}
+.history-permalinks .icon {
+    margin-right: 4px;
+}
+
+.addStage {
+    margin: 5px 5px 25px 5px
+}
+.addStage .aui-toolbar {
+    float: right;
+    margin-left: 20px;
+}
+
+

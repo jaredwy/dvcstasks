@@ -1,0 +1,248 @@
+<!--
+This file holds details of all the upgrades for Bamboo
+
+The makeup of this XML file is described here :
+
+<upgrades> The root node of the file. Everything should be contained within this node
+    <upgrade> Each upgrade element describes an upgrade task.
+        Attributes
+        1. build -  This defines the build that the upgrade applies to
+
+        <class> The class element defines the name of the class which performs the upgrade.
+        It MUST implement the interface com.atlassian.bamboo.upgrade.UpgradeTask
+-->
+
+<upgrades>
+
+  <bootstrap>
+    <upgrade build="1103">
+      <class>com.atlassian.bamboo.setup.ResetBrokerUrlUpgradeTask</class>
+    </upgrade>
+    <upgrade build="1302">
+      <class>com.atlassian.bamboo.setup.AddFailoverParamsClientBrokerUrlUpgradeTask</class>
+    </upgrade>
+    <upgrade build="1840">
+      <class>com.atlassian.bamboo.setup.UpgradeTask1840IncreaseDbPoolSize</class>
+    </upgrade>
+    <upgrade build="2001">
+      <class>com.atlassian.bamboo.setup.BootstrapUpgradeTask2001UniqueColumnAuthorName</class>
+    </upgrade>
+    <upgrade build="2009">
+      <class>com.atlassian.bamboo.setup.BootstrapUpgradeTask2009DropChainResultTable</class>
+    </upgrade>
+    <upgrade build="2012">
+      <class>com.atlassian.bamboo.setup.BootstrapUpgradeTask2012BindBrokerToAllInterfaces</class>
+    </upgrade>
+    <upgrade build="2016">
+      <class>com.atlassian.bamboo.setup.BootstrapUpgradeTask2016AlterChainStageResultTable</class>
+    </upgrade>
+    <upgrade build="2017">
+      <class>com.atlassian.bamboo.setup.BootstrapUpgradeTask2017DropStageBuildAssociationTable</class>
+    </upgrade>
+    <upgrade build="2019">
+      <class>com.atlassian.bamboo.setup.BootstrapUpgradeTask2019RenameJobDiscriminatorValue</class>
+    </upgrade>
+    <upgrade build="2022">
+      <class>com.atlassian.bamboo.setup.BootstrapUpgradeTask2022CleanupLoginInformationTable</class>
+    </upgrade>
+    <upgrade build="2213">
+      <class>com.atlassian.bamboo.upgrade.tasks.BoostrapUpgradeTask2213SetArtifactsDirectory</class>
+    </upgrade>
+    <upgrade build="2403">
+      <class>com.atlassian.bamboo.upgrade.tasks.BootstrapUpgradeTask2403UpdateMailConfiguration</class>
+    </upgrade>
+  </bootstrap>
+
+  <postBootstrap>
+    <upgrade build="802">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask802CommitMsgFieldToClob</class>
+    </upgrade>
+    <upgrade build="901">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask901JiraIssueTypes</class>
+    </upgrade>
+    <upgrade build="902">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask902Reindex</class>
+    </upgrade>
+    <upgrade build="1002">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask1002CleanupEmptyAuthors</class>
+    </upgrade>
+    <upgrade build="1101">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask1101NotificationRecipients</class>
+    </upgrade>
+    <upgrade build="1102">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask1102NotificationRecipients</class>
+    </upgrade>
+    <upgrade build="1300">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask1300PipelineEnabledByDefault</class>
+    </upgrade>
+    <upgrade build="1301">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask1301RemoveDuplicatedCommits</class>
+    </upgrade>
+    <upgrade build="1307">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask1307SetDefaultElasticImageConfiguration</class>
+    </upgrade>
+    <upgrade build="1309">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask1309DefaultEnabledForElasticSchedule</class>
+    </upgrade>
+    <upgrade build="1310">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask1310UpdateEBSSnapshot</class>
+    </upgrade>
+    <upgrade build="1701">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask1701BackupScheduleCronExpression</class>
+    </upgrade>
+    <upgrade build="1702">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask1702WebRepositoryViewer</class>
+    </upgrade>
+    <upgrade build="1703">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask1703RemoteApiEnableByDefault</class>
+    </upgrade>
+    <upgrade build="1704">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask1704Dependencies</class>
+    </upgrade>
+    <!-- 2.6 start -->
+    <upgrade build="1800">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask1800BuildType</class>
+    </upgrade>
+    <upgrade build="1801">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask1801RemovingObsoleteTable</class>
+    </upgrade>
+    <upgrade build="1803">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask1803ProperlyDisableMaven2PlanDependencies</class>
+    </upgrade>
+    <upgrade build="1821">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask1821ArtifactLinksInitArtifactSize</class>
+    </upgrade>
+    <upgrade build="1823">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask1823ExpiryTypeMigration</class>
+    </upgrade>
+    <upgrade build="1824">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask1824PrepopulateTestCountFields</class>
+    </upgrade>
+    <upgrade build="1825">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask1825MovingTestsAndArtifactLinksToDB</class>
+    </upgrade>
+    <upgrade build="1831">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask1831FixNullBuildCompleted</class>
+    </upgrade>
+    <upgrade build="1832">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask1832NotificationSetTypes</class>
+    </upgrade>
+    <upgrade build="1833">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask1833PrepopulateTestCaseFields</class>
+    </upgrade>
+    <upgrade build="1834">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask1834PrepopulationTestAggregate</class>
+    </upgrade>
+    <upgrade build="1838">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask1838UpdateJabberServerTlsFlag</class>
+    </upgrade>
+    <upgrade build="1904">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask1904FixTestCaseCount</class>
+    </upgrade>
+    <upgrade build="2001">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask2001UniqueColumnAuthorName</class>
+    </upgrade>
+    <upgrade build="2003">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask2003LifeCycleState</class>
+    </upgrade>
+    <upgrade build="2005">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask2005XmlBuildResultBuildStateTranslation</class>
+    </upgrade>
+    <upgrade build="2006">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask2006BuildResultType</class>
+    </upgrade>
+    <upgrade build="2010">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask2010UpdateFirstLastNextJobBuildNumbers</class>
+    </upgrade>
+    <upgrade build="2011">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask2011JobAcls</class>
+    </upgrade>
+    <upgrade build="2013">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask2013ResultSummaryMarkedForDeletion</class>
+    </upgrade>
+    <upgrade build="2014">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask2014ProjectAndStageMarkedForDeletion</class>
+    </upgrade>
+    <upgrade build="2015">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask2015SetFirstBuildNumbers</class>
+    </upgrade>
+    <upgrade build="2018">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask2018DropMarkedFromDeletionOnResultsSummary</class>
+    </upgrade>
+    <upgrade build="2021">
+        <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask2021RemoveDataForChainStageTriggerReason</class>
+    </upgrade>
+    <upgrade build="2022">
+        <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask2022SetChainResultRelationshipOnJobResult</class>
+    </upgrade>
+    <upgrade build="2023">
+        <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask2023CleanupDuplicateUserCommits</class>
+    </upgrade>
+    <upgrade build="2025">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask2025BuildChainConversion</class>
+    </upgrade>
+    <upgrade build="2026">
+        <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask2026DeleteOrphanedResultSummaries</class>
+    </upgrade>
+    <upgrade build="2027">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask2027AfterXFailedNotificationConversion</class>
+    </upgrade>
+    <upgrade build="2031">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask2031AlterJobDependencyType</class>
+    </upgrade>
+    <upgrade build="2032">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask2032ChangeDepProviderIdToKey</class>
+    </upgrade>
+    <upgrade build="2033">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask2033MigrateMaven2DependencyConfiguration</class>
+    </upgrade>
+    <upgrade build="2034">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask2034RemoveOrphanedBandanaData</class>
+    </upgrade>
+    <upgrade build="2201">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask2201PresetSkippedCommits</class>
+    </upgrade>
+    <upgrade build="2203">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask2203FillEmptyQueueTime</class>
+    </upgrade>
+    <upgrade build="2204">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask2204MigrateArtifactDefinitions</class>
+    </upgrade>
+    <upgrade build="2205">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask2205InitArtifactLinksChainFlag</class>
+    </upgrade>
+    <upgrade build="2207">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask2207PrepopulateImageDisabledField</class>
+    </upgrade>
+    <upgrade build="2208">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask2208FillJobKey</class>
+    </upgrade>
+    <upgrade build="2209">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask2209NewArtifactDirStructure</class>
+    </upgrade>
+    <upgrade build="2210">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask2210AddSystemLinkTypeToArtifactLinks</class>
+    </upgrade>
+    <upgrade build="2212">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask2212AddProducerJobResultsToTheArtifactLinks</class>
+    </upgrade>
+    <upgrade build="2214">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask2214RemoveLatestArtifactDirs</class>
+    </upgrade>
+    <upgrade build="2301">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask2301InitArtifactLinksSize</class>
+    </upgrade>
+    <upgrade build="2303">
+        <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask2303RemoveOrphanedBuildData</class>
+    </upgrade>
+    <upgrade build="2402">
+        <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask2402MoveGlobalVariablesToDb</class>
+    </upgrade>
+    <upgrade build="2404">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask2404SetUniqueIdForAllRequirements</class>
+    </upgrade>
+    <upgrade build="2405">
+      <class>com.atlassian.bamboo.upgrade.tasks.UpgradeTask2405ConvertBuildersToTasks</class>
+    </upgrade>
+  </postBootstrap>
+</upgrades>

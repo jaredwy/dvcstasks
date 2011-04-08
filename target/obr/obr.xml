@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<repository lastmodified="20110408122637.207" name="MyRepository">
+<resource id="Untitled--444626746/0.0.0" presentationname="Unnamed - doesntmatter:doesntmatter:jar:doesntmatter" symbolicname="Untitled--444626746" uri="/Users/jwyles/Code/dvcstasks/target/dvcstasks-1.0-SNAPSHOT.jar" version="0.0.0">
+<description/>
+<size>3450</size>
+<category id="doesntmatter"/>
+<capability name="bundle">
+<p n="manifestversion" v="2"/>
+<p n="presentationname" v="Unnamed - doesntmatter:doesntmatter:jar:doesntmatter"/>
+<p n="symbolicname" v="Untitled--444626746"/>
+<p n="version" t="version" v="0.0.0"/>
+</capability>
+</resource>
+</repository>

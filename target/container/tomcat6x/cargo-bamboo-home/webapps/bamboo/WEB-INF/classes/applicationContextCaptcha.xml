@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:plugin="http://atlassian.com/schema/spring/plugin"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+       http://atlassian.com/schema/spring/plugin http://atlassian.com/schema/spring/plugin.xsd">
+
+    <bean id="imageCaptchaService" class="com.octo.captcha.service.image.DefaultManageableImageCaptchaService">
+        <constructor-arg>
+            <bean class="com.octo.captcha.service.captchastore.FastHashMapCaptchaStore"/>
+        </constructor-arg>
+        <constructor-arg ref="captchaEngine"/>
+        <constructor-arg value="180"/>
+        <constructor-arg value="100000"/>
+        <constructor-arg value="75000"/>
+    </bean>
+
+    <bean id="captchaEngine" class="com.atlassian.bamboo.captcha.AtlassianGimpyEngine"/>
+
+</beans>

@@ -1,0 +1,2 @@
+[@ww.label labelKey='webRepositoryViewer.default.url' value='${build.buildDefinition.webRepositoryViewer.webRepositoryUrl!}' hideOnNull='true' /]
+[@ww.label labelKey='webRepositoryViewer.default.module' value='${build.buildDefinition.webRepositoryViewer.webRepositoryName!}' hideOnNull='true' /]

@@ -1,0 +1,12 @@
+simple	08-Apr-2011 11:37:55	Build BEER-JENS-JOB1-1 started building on agent Default Agent
+simple	08-Apr-2011 11:37:55	Updating source code to the latest revision
+error	08-Apr-2011 11:37:56	git@github.com:jschumacher/speakeasy-plugin.git: Auth fail
+error	08-Apr-2011 11:37:56	Error occurred while executing the build for BEER-JENS-JOB1-1 : git@github.com:jschumacher/speakeasy-plugin.git: Auth fail
+simple	08-Apr-2011 11:37:56	Running on server: post build plugin 'Clover Delta Calculator'
+simple	08-Apr-2011 11:37:56	Running on server: post build plugin 'Build Hanging Detection Configuration'
+simple	08-Apr-2011 11:37:56	Running on server: post build plugin 'NCover Results Collector'
+simple	08-Apr-2011 11:37:56	All post build plugins have finished
+simple	08-Apr-2011 11:37:56	Generating build results summary...
+simple	08-Apr-2011 11:37:56	Saving build results to disk...
+simple	08-Apr-2011 11:37:57	Indexing build results...
+simple	08-Apr-2011 11:37:57	Finished building BEER-JENS-JOB1-1.

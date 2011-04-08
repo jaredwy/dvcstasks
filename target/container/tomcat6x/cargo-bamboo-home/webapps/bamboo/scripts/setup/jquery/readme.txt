@@ -1,0 +1,1 @@
+JQuery is only included here for the startup wizard.  If you need jquery please use AJS(AUI) instead.

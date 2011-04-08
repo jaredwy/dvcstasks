@@ -1,0 +1,124 @@
+/*------------------------------------------------------------------------------------------- Wide Build Plans List Styles */
+
+#allPlansToggler {
+    float: right;
+    margin: -5px 0 5px 0;
+}
+
+
+span.buildSummaryDetails  {
+    display: inline;
+    font-size: 10px;
+}
+
+span.buildSummaryDetails > span {
+    border-left: 1px solid gray;
+    display: inline;
+    margin: 0 0 0 4px;
+    padding: 0 0 0 4px;
+}
+
+span.buildSummaryDetails > span:first-child {
+    border: 0;
+}
+
+/** PlanOperations **/
+#currentActivity .buildActions a,
+#currentActivity .buildActions span,
+#liveActivity .build-stop,
+#liveActivity .build-stop-disabled,
+#buildResults .build-stop,
+#buildResults .build-stop-disabled
+{
+    width: 16px;
+    height: 16px;
+    display: block;
+    overflow: hidden;
+    text-indent: -9999px;
+    float: left;
+    margin-left: 2px;
+}
+#buildResults .build-stop,
+#buildResults .build-stop-disabled
+{
+    float: right;
+    margin-right: 2px;
+}
+
+.build-stop
+{
+    background: url("../../../images/iconsv3/stop.png") no-repeat;
+}
+.build-stop-disabled
+{
+    background: url("../../../images/icons/delete_disabled.gif") no-repeat;
+}
+
+#currentActivity .build-elastic {
+    background: url("../../../images/jt/icn_elastic_cloud.gif") no-repeat;
+}
+
+#currentActivity .build-elastic-disabled {
+    background: url("../../../images/jt/icn_elastic_cloud.gif") no-repeat;
+    opacity: 0.25;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=25)";
+    filter: alpha(opacity=25);
+}
+
+#dashboard > thead > tr > th {
+    background: 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}
+
+#dashboard > tbody > tr > td {
+    border-left: 0;
+    border-right: 0;
+}
+
+#dashboard .planOperations {
+    float: right;
+}
+
+#dashboard .projectLink {
+    font-weight: bold;
+}
+
+#dashboard td.twixie {
+    padding-left: 2px;
+    padding-right: 0px;
+    width: 16px;
+}
+
+/*AUI override - zebra doesn't like hidden fields AJS-569*/
+#dashboard > tbody > tr > td {
+    background-color: #FFF;
+    border-bottom: 1px solid #EFEFEF;
+}
+#dashboard > tbody > tr.zebraOverride > td {
+    background-color: #FAFAFA;
+}
+
+#dashboard > table{
+    border-bottom: 2px solid #CCC;
+}
+
+/*End AUI override*/
+
+/*AUI override - i can't use rowspan to negate zebras because i dont know how many plans there is going to be*/
+#dashboard > tbody > tr > td.projectSection {
+    background-color: #FFF;
+    border-bottom: none;
+}
+/*End AUI override*/
+
+#external-operations.dashboardExternal {
+    position: relative;
+    float: right;
+    top: 2px;
+}
+
+#external-operations .icon-wallboard {
+    margin-right: 7px;
+}

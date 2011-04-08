@@ -1,0 +1,2022 @@
+
+/* Bamboo Stylesheet */
+/** {*/
+    /*margin: 0;*/
+    /*padding: 0;*/
+/*}*/
+
+/* Standard HTML elements */
+
+ol.noBullet, ul.noBullet
+{
+    list-style: none;
+}
+
+pre
+{
+    font-family: "Monaco", "Courier New", monospace;
+    font-size: 11px;
+}
+
+a
+{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+textarea {
+    overflow: auto;
+}
+
+
+.selectedRow {
+    background-color: #FFFFDC !important;
+}
+
+.selectedRow td {
+    background-color: #FFFFDC !important;
+}
+
+
+
+.successfulLabel{
+    font-weight: bold;
+    color: #008000;
+}
+.failedLabel {
+    font-weight: bold;
+    color: #cc0000;
+}
+
+.first {
+    margin-top: 0;
+}
+
+.clearer {
+    clear: both;
+}
+
+div.row {
+    clear: both;
+    padding-top: 10px;
+}
+
+div.row span.label {
+    float: left;
+    width: 100px;
+    text-align: right;
+}
+
+div.row span.formw {
+    float: right;
+    width: 335px;
+    text-align: left;
+}
+
+.maxWidth
+{
+    width: 100%;
+}
+
+.logo {
+    padding: 0;
+}
+
+.logotext {
+    font-family: Arial, Impact, Tahoma, Helvetica, Sans-Serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    padding: 10px 4px 4px 4px;
+}
+
+.small {
+    font-size: 10px;
+}
+
+.cWhite, .cWhite a {
+    color: white;
+}
+
+/************/
+/* Nav menu */
+/********
+    background: #3c78b5;
+
+****/
+.navmenu {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    color: white;
+    background: #3c78b5;
+}
+
+.navmenu ul {
+    margin: 0;
+    padding: 0;
+    padding-left: 6px;
+    list-style: none;
+}
+
+.navmenu li {
+    font: 10px Verdana, Sans-Serif;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    float: left;
+}
+
+.navmenu li a, .navmenu li span {
+    color: white;
+    display: block;
+    float: left;
+}
+
+.navmenu li a {
+    padding: 5px 10px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}
+
+.navmenu ul li span {
+    padding: 5px 3px;
+    font-weight: normal;
+}
+
+.navmenu li a:hover {
+    color: white;
+    text-decoration: none;
+    background-color: #003366;    
+}
+
+.navmenu li.current a
+{
+    color: white;
+}
+
+
+.navItemOver
+{
+    font-family: Verdana, Sans-Serif;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.navItemOver a
+{
+    color: #ffffff;
+}
+
+.navItem
+{
+    font-size: 10px;
+    font-family: Verdana, Sans-Serif;
+    font-weight: bold;
+    vertical-align: middle;
+    color: #ffffff;
+}
+
+.navItem a
+{
+    color: #ffffff;
+}
+
+
+/* The right
+ links */
+
+.navmenu .actionLinks {
+    padding: 0;
+    margin-right: 5px;
+}
+
+.navmenu .actionLinks a.buildActions {
+    display: block;
+    padding: 5px 0 5px 25px;
+    background-repeat: no-repeat;
+    background-position: 5px 3px;
+    border-bottom: 1px dotted #bbbbbb;
+    background-image: url(../../../images/jt/icn_edit.gif);
+}
+
+.clickable
+{
+    cursor: pointer;
+}
+
+table.centred
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+table caption
+{
+    font-size: 90%;
+}
+
+
+/*Sub menu*/
+/*#submenu {*/
+    /*font-size: 11px;*/
+    /*text-transform: lowercase;*/
+    /*margin: 3px 0 10px 0;*/
+    /*color: #3c78b5;*/
+    /*letter-spacing: 0.05em;*/
+/*}*/
+
+/*#submenu a{*/
+    /*color: #3c78b5;*/
+    /*font-weight: bolder;*/
+/*}*/
+
+
+/*****************/
+/* Main Contents */
+/*****************/
+
+.widecolumn .entry p {
+    font-size: 1.05em;
+}
+
+.narrowcolumn .entry, .widecolumn .entry {
+    line-height: 1.4em;
+}
+
+.widecolumn {
+    line-height: 1.6em;
+}
+
+#bodyColumn h2 {
+    margin-top: .3em;
+    margin-bottom: .5em;
+}
+
+#bodyColumn {
+    margin: 0 5px;
+    padding: 5px;
+
+}
+
+.applicationError {
+    padding: 10px;
+    margin-top: .3em;
+    margin-bottom: .5em;
+    border: 1px solid red;
+    background-color: #fff0f0;
+}
+
+.applicationError .agentErrorDetails {
+    float: right;
+    font-size: 10px;
+}
+
+.footer {
+    text-align: center;
+    width: 100%;
+    background: #f0f0f0;
+}
+
+.footer p, .footer a {
+    font: 9px Arial, helvetica, sans-serif;
+    color: #666;
+}
+
+.grey
+{
+   color: gray;
+}
+
+#buildLeftCol {
+    float:left;
+    width:50%;
+    margin-bottom:1em;
+}
+
+#buildRightCol {
+    float:right;
+    width:50%;
+    margin-bottom:1em;
+    }
+
+
+.subGrey, .subGrey *
+{
+    font-size: 90%;
+    color: gray;
+}
+
+.subGrey a {
+    color: inherit;
+}
+
+.configureBuilderForm{
+    vertical-align: top;
+}
+
+.centered
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fullyCentered
+{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.tabContents
+{
+    padding: 3px 5px 0 5px;
+}
+
+
+img.centered
+{
+    display: block;
+}
+
+.hover
+{
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+td.hover a{
+    text-decoration: underline!important;
+}
+
+
+/*********************************************/
+/* Unit Test Results                         */
+/*********************************************/
+
+.testCaseErrorLogSection .outputErrorLog
+{
+    color: #cc0000;
+    overflow: auto;
+    border: 1px dashed #cccccc;
+    padding: 5px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+table.testResults {
+    background-color: #fafafa;
+    border: 1px solid #cccccc;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+table.testResults th {
+    background-color: #eee;
+    padding: 5px;
+}
+
+
+table.testResults td {
+    padding-left: 5px;
+    border-right: 1px dotted #dddddd;
+}
+
+
+table.testResults td.unitTestErrors pre{
+    overflow: auto;
+    margin: 5px 5px 15px 5px;
+    padding: 5px;
+    border: 1px dashed #cccccc;
+}
+
+.ebsError, .ebsError *
+{
+    color: #cc0000;
+    background-color: #ffe6e6;
+}
+
+tr.ebsErrorDark, tr.ebsErrorDark td, tr.ebsErrorDark *
+{
+    color: #cc0000;
+    background-color: #f5d3d3;
+}
+
+
+td.testClassName, td.testClassDuration
+{
+    font-weight: bold;
+    padding: 10px 5px 5px 5px;
+}
+
+td.testClassName a{
+    color:inherit;
+}
+
+table.testResults td.testMethodName {
+    padding: 3px 0 0 5em;
+}
+
+td.testMethodName a {
+    color: inherit;
+}
+
+td.testClassDuration
+{
+    white-space: nowrap;
+    width: 10% !important;
+}
+
+td.testDuration
+{
+    color: gray;
+    white-space: nowrap;
+    width: 10% !important;
+}
+
+.testResults .title
+{
+    font-weight:bold;
+    font-size: 130%;
+}
+
+.upper
+{
+    font-size: 130%;    
+}
+
+
+/*********************************************/
+/* Test Summary Table                        */
+/*********************************************/
+
+.testResultSummaryArea {
+    float: left;
+    width: 49%;
+}
+
+#currentlyRunning #changes
+{
+    margin: 0;
+    padding: 0;
+}
+
+.changeLogSummaryArea {
+    float: right;
+    width: 49%;
+}
+
+.testSummary .details {
+    font-weight:normal;
+    font-size: 80%;
+    color: gray;
+
+}
+
+
+
+/*********************************************/
+/* New Failing Tests Classes                 */
+/*********************************************/
+.newTestFailuresSection ul
+{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.newTestFailuresSection li
+{
+
+}
+
+.newTestFailuresSection .testName
+{
+    color: #cc0000;
+    margin: 5px 0 5px 0;
+}
+
+.newTestFailuresSection .testName a
+{
+    color: #cc0000;
+    font-weight: bold;
+}
+
+
+/**********************************************/
+/* Existing Failures Group                    */
+/**********************************************/
+
+.existingFailuresGroupingSelection {
+    font-size: 11px;
+}
+
+.existingFailuresGroupingSelection a {
+    color: #326ca6;
+    cursor: pointer;
+}
+
+.existingFailuresGroupingSelection a.disabled {
+    text-decoration: none;
+    color: #999999;
+}
+
+/**********************************************/
+
+.errorLabel {
+    font: 1em/2em verdana, arial, helvetica, sans-serif;
+    font-style: italic;
+    color: red;
+}
+
+.errorMessage {
+    font-size: 1em;
+    line-height: 2em;
+    font-weight: bold;
+    text-align: left;
+    color: red;
+}
+
+.errorBoxMessage {
+    margin-top: 0;
+}
+
+.errorText {
+    font-weight: bold;
+    color: red;
+}
+
+#jobLogDisplay {
+    padding-bottom: 2px;
+}
+#jobLogDisplay > label {
+    vertical-align: middle;
+}
+#jobLogDisplay > select {
+    font-size: 0.75em;
+}
+#remoteAgentLog, #buildLog {
+    border: 1px dashed #ccc;
+}
+
+#buildLog,
+#remoteAgentLog
+{
+    width: 99%;
+}
+
+#buildLog .time
+{
+    white-space: nowrap;
+    font-size: 85%;    
+    color: gray;
+    width: 1%;
+}
+
+#buildLog, #remoteAgentLog, #buildLog td, #remoteAgentLog td
+{
+    font-family: "Monaco", "Courier New", monospace;
+    font-size: 11px;
+}
+
+#buildLog td, #remoteAgentLog td
+{
+    padding: 0 4px;
+}
+
+#buildLog .errorOutputLog
+{
+    color: #c00;
+}
+
+.chartParamForm
+{
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+/*Style for bambooInfoDisplay*/
+.subHeadingDetails {
+    /*some weird IE hack*/
+    width: 100%;
+    overflow: hidden;
+    zoom: 1;
+}
+
+
+.showBorder {
+    border-collapse: collapse;
+    border: 1px #3c78b5 solid;
+}
+
+.subHeadingDetails .titleSection {
+    font-weight: bold;
+    background-color: #F0F0F0;
+    padding: 4px;
+    /*border-bottom: 2px #bbbbbb dotted;*/
+    vertical-align: middle;
+
+}
+
+.subHeadingDetails .fieldArea {
+    clear: left;
+    display: block;
+    overflow: hidden; /*border: 1px #bbbbbb solid;*/
+/* This is to give IE a 'layout' */
+    /*height: expression( '1%' );*/
+}
+
+.subHeadingDetails .fieldArea label.fieldLabelArea, .subHeadingDetails .fieldArea .firstColumn {
+    display: block;
+    float: left;
+    width: 30%;
+    padding: 1px 0;
+    margin-right: 1%;
+    margin-left: 1%; /*margin: 0 0 5px 0;*/
+    text-align: left;
+    font-weight: bold;
+}
+
+/* A style for use when there is no first column*/
+.subHeadingDetails .fieldArea .secondColumn {
+    margin-left: 32%;
+}
+
+.subHeadingDetails .fieldArea .fieldValueArea {
+    display: block;
+    float: left;
+    width: 65%;
+    padding: 1px 0; /*margin: 0 0 5px 0;*/
+}
+
+.subHeadingDetails .descriptionSection {
+    padding: 4px;
+}
+
+
+
+a.rightFloat,
+span.rightFloat {
+    float: right;
+    text-decoration: none;
+}
+a.rightFloat:hover {
+    text-decoration: underline;
+}
+
+.bambooCommandLog, .buildOutputLog
+{
+    white-space: pre-wrap;
+}
+
+.bambooCommandLog div
+{
+    margin: 10px;
+    padding: 10px;
+    color: #000;
+    border: solid 1px #3c78b5;
+    background-color: #D8E4F1;
+}
+
+.bambooCommandLog
+{
+    padding: 10px;
+}
+
+.buildOutputLog {
+    color: #003366;
+}
+
+td.operations
+{
+    width: 100px;
+    white-space: nowrap;
+}
+
+.adminErrorBox
+{
+    padding: 2px 2px 2px 30px;
+    background-repeat: no-repeat;
+    background-position: 6px 7px;;
+    margin: 2px 14px 0 14px;
+    background-image: url(../../../images/icons/warning_16.gif);
+    border: solid 1px #F0C000;
+    background-color: #FFFFCE;
+}
+
+.adminErrorBox p {
+    margin-top: 3px;
+}
+
+.adminErrorBoxLinks {
+    padding-right: 8px;
+    padding-top: 2px;
+    float: right;
+    font-size: 80%;
+}
+
+.noteBox, .infoBox, .tipBox
+{
+    padding: 20px 0 15px 37px;
+    background-repeat: no-repeat;
+    background-position: 17px 20px;
+    margin: 10px 10% 10px 10%;
+    text-align: left;
+}
+
+.noteBox a, .infoBox a, .tipBox a
+{
+	font-weight: bold;
+}
+
+.noteBox
+{
+	background-image: url(../../../images/icons/warning_16.gif);
+    border: solid 1px #F0C000;
+    background-color: #FFFFCE;
+}
+
+.noteBox p {
+    margin-top: 3px;
+}
+
+.infoBox
+{
+	background-image: url(../../../images/icons/information.gif);
+    border: solid 1px #3c78b5;
+    background-color: #D8E4F1;
+    clear: both;
+}
+
+.infoMessage {
+    background: url(../../../images/icons/information.gif) no-repeat 23px 3px;
+    padding: 5px 0 10px 45px;
+    text-align: left;
+}
+
+.tipBox
+{
+    border: solid 1px #090;
+    background-color: #dfd;
+}
+
+
+
+/*********************************************/
+/* Author Pages                              */
+/*********************************************/
+.authorSummary {
+    margin-bottom: 20px;
+    margin-right: 1%;
+    float: left;
+    width: 48%;
+    overflow: hidden;
+}
+
+.authorBuildsTable td {
+    vertical-align: middle;
+}
+
+.authorBuildsTable td.whenColumn, .authorBuildstable td.testSummaryColumn {
+    width: 13%;
+}
+
+.authorBuildsTable td.commentColumn.td {
+    width: 61%;
+}
+
+td.commentColumn
+{
+    padding: 0!important;
+}
+
+td.commentColumn > div.commentList > div {
+    border-top: 1px dotted #ccc;
+    padding: 4px;
+}
+
+td.commentColumn > div.commentList > div:first-child {
+    border-top: 0;
+}
+
+td.commentColumn .actionLinks {
+    font-size: 10px;
+    margin-left: 10px;
+}
+
+/*********************************************/
+/* Left-Hand-Side Navigation                 */
+/*********************************************/
+
+#navColumn .body div, body.docs #toc li li {
+    background-repeat: no-repeat;
+    background-position: .5em .5em;
+}
+
+#navColumn .body .heading {
+    background-image: none;
+}
+
+/* For the main page */
+
+
+a.Failed, #Failed, .Failed, .Failed a{
+    color: red;
+}
+
+a.Successful, #Successful, .Successful, .Successful a{
+    color: green;
+}
+
+a.Unknown, #Unknown, .Unknown, .Unknown a{
+    color: gray;
+}
+
+a.Suspended, #Suspended, .Suspended, .Suspended a{
+    color: gray;
+}
+
+a.NeverExecuted, #NeverExecuted, .NeverExecuted, .NeverExecuted a{
+    color: gray;
+}
+
+.leftcol, #leftcol .strut {
+    width: 240px;
+}
+
+
+/*********************************************/
+/* Admin decorator                           */
+/*********************************************/
+.dec_adminpage #content,
+.dec_atl_admin #content {
+    margin-right: 15px;
+    padding: 10px 2.2em 10px 200px;
+}
+#admin-content {
+    float: left;
+    padding: 1em;
+    width: 100%;
+}
+#admin-menu {
+    float: left;
+    list-style: none;
+    margin: 0 0 0 -185px;
+    width: 170px;
+}
+#admin-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#admin-menu li {
+    margin: 0;
+    padding: 0;
+}
+#admin-menu > li {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #BBB;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+#admin-menu h2 {
+	background-repeat: no-repeat;
+	background-position: 93% 50%;
+    border: 0;
+    font-size: 100%;
+    margin: 0;
+	padding: 7px 10px;
+}
+#admin-menu ul ul {
+	color: #036;
+	margin-bottom: 5px;
+	text-decoration: none;
+}
+#admin-menu a {
+	display: block;
+    padding: 5px 7px 5px 10px;
+}
+
+#admin-menu .active a {
+    color: #000;
+    font-weight: bold;
+}
+
+
+/*********************************************/
+/* Build Tabs                              */
+/*********************************************/
+
+.subtabmenu {
+    border-bottom: 2px #dddddd solid;
+    background-color: #dddddd;
+}
+
+.subtabmenu a.current {
+    border-bottom: 2px #dddddd solid;
+    background-color: #dddddd;
+    text-decoration: none;
+}
+
+.lhsmenu {
+    text-align: left;
+}
+
+.rhsmenu {
+    text-align: right;
+    padding-right: 3px;
+}
+
+/*********************************************/
+/* Make tables look nice                     */
+/*********************************************/
+
+.grid {
+    margin-top: 2px;
+}
+
+.grid th {
+}
+
+.wide {
+    width: 98%
+}
+
+.grid td {
+    border: 1px solid #ccc;
+}
+
+table.lined td, table.lined tr, td.lined, tr.lined {
+    border-bottom: 1px solid #ccc;
+}
+
+/*********************************************/
+/* Test Results table                        */
+/*********************************************/
+
+.testResults {
+    background-color: white;
+    margin-top: 2px;
+    margin-bottom: 5px
+}
+
+.testResults th {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 2px 4px 2px 4px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.testResults td {
+    padding: 3px 4px 3px 4px;
+    padding-left: 5px;
+}
+
+/*********************************************/
+/* Changes Summary table                     */
+/*********************************************/
+
+table.changesSummary {
+    width: 100%;
+}
+
+table.changesSummary th, table.changesSummary td {
+    padding: 1px 10px 1px 10px;
+}
+
+table.changesSummary th {
+    border-bottom: 1px solid #3c78b5;
+}
+
+table.changesSummary td.author {
+	padding-left: 0;
+	border-right: 1px dotted #3c78b5;
+}
+
+/*********************************************/
+/* Popup Notes                               */
+/*********************************************/
+
+.popupFont {
+    font-family: verdana, arial, helvetica, sans-serif;
+}
+
+.popupCaptionFont {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+.popupBgColour {
+    background-color: #f0f0f0;
+    padding: 3px 4px 3px 4px;
+    border: 1px solid black;
+}
+
+.popupCaptionBgColour {
+    background-color: #869A94;
+}
+
+/*********************************************/
+/* Labels                                    */
+/*********************************************/
+
+#labelArea {
+    margin-top: -1.25em;
+}
+
+#labelArea dd > span {
+    background: url( ../../../images/bad.gif) no-repeat 100% 50%;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 3px;
+    padding-right: 13px;
+}
+
+#labelForm .textField {
+    width: 55%;
+}
+
+#labelForm .errorMessage {
+    font-size: 10px;
+    display: inline;
+}
+
+.labelSortSelection {
+    font-size: 11px;
+}
+
+.labelSortSelection a.disabledLink {
+    text-decoration: none;
+    color: #505050;
+}
+
+#labelCrumb {
+    clear: both;
+    color: #505050;
+	margin: 0 0 0.5em 0;
+}
+
+#labelCrumb a {
+	font-weight: bold;
+}
+
+ul.labelDisplay {
+    line-height: 2em;
+    list-style: none;
+}
+
+ul.labelDisplay li {
+    float: left;
+}
+
+/*********************************************/
+/* Comments                                  */
+/*********************************************/
+#commentToggle
+{
+	float: right;
+	border: 0 none #FFFFFF;
+	background-image: none;
+	white-space: nowrap;
+    display: inline;
+    margin: 0;
+}
+
+#commentToggle a
+{
+	display: block;
+	padding: 0 6px 0 0;
+	background-image: none;
+}
+
+#commentToggle a:hover
+{
+    cursor: pointer;
+}
+
+
+
+
+/*********************************************/
+/* Help                                      */
+/*********************************************/
+
+.sampleCode {
+    border: 1px solid #ccc;
+    padding: 3px 4px 3px 4px;
+    padding-bottom: 5px;
+    background-color: #f0f0f0;
+    font-family: "Monaco", "Courier New", monospace;
+    font-size: 8pt;
+}
+
+.inlineCode {
+    font-family: "Monaco", "Courier New", monospace;
+}
+
+code {
+    display: block;
+    padding: 5px 0 5px 15px;
+    margin: 1em;
+    border: 1px solid #dddddd;
+    color: #555555;
+    background-color: white;
+    font-family: "Monaco", "Courier New", monospace;
+}
+
+.apiSection {
+    color: black;
+    background-color: white;
+    background-repeat: no-repeat;
+    font: 100% "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
+    margin: 0;
+    margin-bottom: 0.5em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    margin-top: 0.5em;
+    padding-left: 0.0em;
+}
+
+.api {
+    font: 100% "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+}
+
+
+
+.disabled, .disabled a, .disabled > td
+{
+    color: #505050;
+}
+
+.warning
+{
+    color: #cc0000;
+}
+
+.queue th, .queue td {
+    border: 1px solid #cccccc;
+    padding: 4px;
+    vertical-align: top;
+}
+
+.queueInfo
+{
+    padding: 4px;
+    background-color: #efefef;
+    font-weight: bold;
+}
+
+
+.queueBuilds
+{
+    width: 100%;
+}
+
+.queueBuilds, .queueBuilds table, .queueBuilds td
+{
+    margin: 0 !important;
+    border: none;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.queueBuilds td
+{
+    padding: 4px;
+}
+
+.queueBuilds .building,  .queueBuilds .building td
+{
+    font-weight: bold;
+    background-color: #fffff0;
+}
+
+.elasticAgentSubTableCell
+{
+    background-repeat: no-repeat;
+    background-image: url(../../../images/agent_arrow.gif);
+    background-position: 35px 0;
+    padding-left: 46px!important;
+}
+
+.elasticRowTopless td
+{
+    border-top: none;
+    background-color: #f6f6f6;
+    padding: 4px;
+}
+
+.elasticHeaderImage
+{
+    padding: 4px;
+}
+
+td.agentStatus, td.agentStatus *
+{
+    white-space: nowrap;
+}
+
+.elasticRowBottomless td
+{
+   border-bottom: none;
+
+}
+
+.elasticRow td {
+    white-space: nowrap;    
+}
+.minColumn
+{
+    width: 1%;
+}
+
+.noBorder
+{
+    border: none!important;
+}
+
+.headingLinks {
+    float: right;
+    font-size: 50%;
+}
+
+
+.actionLinks
+{
+    float: right;
+    font-size: 80%;
+	margin-right: 3px;
+}
+
+
+/* Suggesttion from http://www.quirksmode.org/oddsandends/wbr.html*/
+wbr:after {
+    content: "\00200B";
+}
+/* AJAX Goodies */
+
+.ProgressBar {
+    border: 1px solid #ccc;
+    padding: 3px 3px 3px 3px;
+    color: white;
+    background-color: white;
+}
+
+table.changeSets th
+{
+    background-color: #f4f8fb;
+    width: 8em;
+}
+
+table.changeSets
+{
+    border: 1px dotted #3c78b5;
+    width: 100%;
+    margin: 10px 0;
+}
+
+table.changeSets th, table.changeSets td
+{
+    padding: 5px;
+}
+
+table.changeSets td ul
+{
+    padding-left: 15px;
+    margin-top: 0;
+}
+
+table.changeSets td ul a
+{
+    text-decoration: none;
+}
+
+table.changeSets td ul a:hover
+{
+    text-decoration: underline;
+}
+
+#failedTestResultsSection strong
+{
+    color: red;
+}
+
+/* Floating toolbar style*/
+.toolbar {
+    float: right;
+    padding: 4px 5px 0 0;
+    vertical-align: middle;
+    text-align: right;
+}
+ul.toolbar {
+    list-style: none;
+    margin: 0;
+}
+ul.toolbar > li {
+    display: inline-block;
+    margin: 0 !important;
+}
+ul.toolbar > li + li:before {
+    content: "| ";
+    margin: 0 3px;
+}
+
+.tools {
+    padding: 3px 5px;
+    border: 1px dotted #bbb;
+    background-color: #fefefe;
+    vertical-align: middle;
+    text-align: left;
+}
+
+.toolbar a {
+    font-size: inherit;
+    font-weight: normal;
+}
+
+#buildErrorOutputSection
+{
+    margin-bottom: 20px;
+}
+
+.floatingPanel
+{
+    float: left;
+    width: 48%;
+    margin-right: 1%;
+    overflow: hidden;
+}
+
+.floatingPanel .fieldArea label.fieldLabelArea, .evenWidth .fieldArea label.fieldLabelArea{
+    width: 48%;
+}
+
+.floatingPanel .fieldArea .fieldValueArea, .evenWidth .fieldArea label.fieldLabelArea {
+    width: 48%;
+}
+
+.paddedClearer
+{
+    clear: both;
+    padding-bottom: 10px;
+}
+
+.highlightedStat
+{
+    float: right;
+    border: solid 1px #3c78b5;
+    color: #3c78b5;
+    background-color: #D8E4F1;
+    text-align: center;
+    padding: 10px;
+
+}
+
+.highlightedStat .title
+{
+    font-size: 22pt;
+	font-weight: bold;
+}
+
+.highlightedStat .details {
+    margin-top: 6px;
+}
+/*-------------------------------------------------------------------------------------------- Report Related Styles */
+.reportParam {
+    float: left;
+    width: 35%;
+    padding: 1px 10px 0 1px
+}
+.reportParam .aui h2 {
+    margin-top: 0;
+}
+
+.reportDisplay {
+    float: left;
+    width: 63%;
+}
+
+
+
+/*-------------------------------------------------------------------------------------------- Portlet Related Styles */
+
+.portlet {
+    margin-bottom: 10px;
+}
+
+.portlet h2{
+    border: 0;
+    background-color: #d5e1ee;
+}
+
+.portlet ol.errorLog li {
+    margin-left: 20px;
+}
+
+/*------------------------------------------------------------------------------------------- Build Plans List Styles */
+
+.narrowPlanList .buildList {
+    list-style: none;
+    margin: 0;
+}
+
+.narrowPlanList .projectSection {
+    border-top: 1px solid #ddd;
+}
+
+.narrowPlanList .buildListItem {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    margin: 0;
+    width: 100%;
+}
+
+.narrowPlanList .buildListStatusIcon {
+    float: left;
+    margin: 3px 0 0 3px;
+}
+
+.narrowPlanList .buildListItemOperations {
+    float: right;
+    margin: 5px 5px 0 0;
+}
+
+.narrowPlanList .buildListProjectHeader {
+    background: #f0f0f0;
+    cursor: pointer;
+    margin: 0;
+    padding: 4px 0 4px 4px;
+}
+
+.narrowPlanList .buildListItemHeader {
+    font-weight: bold;
+    margin-left: 23px;
+    padding: 4px 0 4px 0;
+    word-spacing: 2px;
+}
+
+.narrowPlanList .projectHeaderSummary {
+    color: #505050;
+    font-size: 11px;
+}
+
+.narrowPlanList .projectDisplayToggler {
+    float: right;
+    font-size: 10px;
+    margin: 1px 5px 0 0;
+}
+
+.narrowPlanList .projectLink {
+    font-weight: bold;
+}
+
+.narrowPlanList .buildListItemDetails {
+    background: #f0f0f0;
+    color: #505050;
+    padding: 4px 0 4px 23px;
+}
+
+.narrowPlanList .buildListItemDetails ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.narrowPlanList .buildListItemDetails li {
+    border-right: 1px solid #bbb;
+    display: inline;
+    margin: 0 4px 0 0;
+    padding: 0 4px 0 0;
+}
+.narrowPlanList .buildListItemDetails li.last {
+    border: 0;
+}
+
+/*------------------------------------------------------------------------------------------------ User Search Styles */
+.inlineSearchForm {
+    border: 1px solid #CCCCCC;
+    margin-bottom: 1em;
+    padding: 6px 4px 6px 4px;
+}
+
+.inlineSearchField {
+    float: left;
+    width: 29%;
+    vertical-align: bottom;
+}
+
+.inlineSearchField .inlineSearchLabel {
+    margin-right: 3px;
+    width: 35%;
+}
+
+.inlineSearchField input.textField {
+    width: 65%;
+}
+
+.inlineSubmitButton {
+    float: left;
+    width: 13%;
+}
+
+.inlineSearchDescription {
+    color: #7F7F7F;
+    font-size: 95%;
+    line-height: 100%;
+    margin-top: 10px;
+}
+
+/* -----------------------------------------------------------------------------------------------  Permission Styles */
+
+table.permissions .checkboxCell {
+    text-align: center;
+    padding: 0;
+    width: 10%;
+    vertical-align: middle;
+}
+
+.clickable:hover, .clickable:hover td {
+    background-color: #FFFFDC;
+}
+
+.permissionAddField .fieldValueArea {
+    float: left;
+}
+
+.permissionAddField input.textField {
+    /*width: 80%;  Removing for IE and Opera*/
+}
+
+#viewGlobalPermissions
+{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.permissionForm .formArea {
+    float: left;
+    display: block;
+    width: 73%;
+}
+
+.permissionForm .helpTextArea {
+    float: right;
+    display: block;
+    width: 24%;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 3px;
+}
+
+/*.permissionForm .buttons-container {*/
+    /*margin-top: 10px;*/
+/*}*/
+
+/*.permissionForm .buttons {*/
+    /*margin-top: 10px;*/
+/*}*/
+
+.helpTextArea ul {
+    margin: 5px 8px;
+    font-size: 11px;
+}
+
+.helpTextArea li {
+    margin-left: 13px;
+}
+
+.helpTextArea .helpTextHeading {
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.helpTextNote {
+    padding-top: 3px;
+}
+
+.helpTextNote li {
+    list-style: none;
+}
+
+.permissionDisplay {
+    width: 98%;
+}
+
+/* -----------------------------------------------------------------------------------------------  Permission Styles */
+
+.capabilitiesView {
+    margin: 0 5px 0 5px;
+}
+
+.capabilitiesView ul.capabilityList {
+    padding: 0;
+}
+
+.capabilitiesView li.capability {
+    list-style: none;
+    padding: 5px 0 5px 0;
+    margin: 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.capabilitiesView li.lastCapability {
+    border-bottom: 0!important;
+}
+
+.capabilitiesView li.capability .capabilityTitle {
+    display:block;
+    float:left;
+    width: 20%;
+}
+
+.capabilitiesView li.capability .operations {
+    float: right;
+    vertical-align: middle;
+}
+
+.capabilitiesView li.capability .capabilityKey {
+    display: block;
+    float: left;
+    width: 20%;
+}
+
+.capabilitiesView li.capability .capabilityValue {
+    display: block;
+    width: 60%;
+    float: left;
+}
+
+
+/* ---------------------------------------------  Toggle related styles (REPLACES TMIB's collapse styles in main.css) */
+.toggleOn {
+    padding-right: 12px;
+	background-image: url(../../../images/icon_collapse_arrow_up.gif);
+	background-repeat: no-repeat;
+	background-position: 100% 50%;
+    cursor:pointer;
+}
+
+.toggleOff {
+    padding-right: 12px;
+    background-image: url(../../../images/icon_collapse_arrow_down.gif);
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    cursor:pointer;
+}
+
+/* -------------------------------------------------------------------------------------------  Banner related styles */
+.statusBanner
+{
+    background-repeat: no-repeat;
+    background-position: 5px 12px;
+    margin: 10px 0;
+    padding: 10px 10px 10px 30px;;
+    vertical-align: middle;
+}
+
+.statusBanner .buildLink, .statusBanner .buildCount,  .statusBanner .big, .statusBanner strong
+{
+	font-size: 150%;
+    line-height: 130%;
+    font-weight: bold;
+}
+
+.currentlyBuilding
+{
+    background-image: url("../../../images/jt/icn_building.gif");
+    border: solid 1px #3c78b5;
+    color: #2E5B89;
+    background-color: #D8E4F1;
+}
+
+.currentlyBuilding a, .currentlyBuilding .big
+{
+	color: #326ca6;
+}
+
+/* Tooltip */
+.tooltip {
+    padding: 5px;
+}
+
+.tooltip .icon {
+    vertical-align: text-bottom;
+}
+
+/*Header*/
+h1.headerPageLine {
+    font-size: 15px;
+    margin-top: 1px;
+    padding-bottom: 2px;
+}
+
+h1.headerObjectLine {
+    margin-top: 1px;
+    margin-bottom: 0;
+    padding-bottom: 1px;
+    border: none;
+}
+
+.toggleButton {
+    margin-top: 10px;
+    float: right;
+}
+
+
+#welcomeImage, #welcomeMessage
+{
+    float: left;
+    margin-right: 20px;
+}
+
+table.noFormat, table.noFormat tr, table.noFormat td
+{
+    border: none;
+}
+
+/**
+form buttons
+suggestion from http://tom.me.uk/scripting/submit.html
+*/
+
+.formLink {
+   color: #326ca6;
+   background-color: transparent;
+   text-decoration: none;
+   border: none;
+   padding: 0;
+   margin:0;
+   cursor: pointer;
+}
+
+.formLink:hover {
+    text-decoration: underline;
+}
+
+ul.pager
+{
+    float: right;
+    display: inline;
+    margin: 0;
+
+}
+
+ul.pager .label
+{
+    font-size: 90%;
+}
+
+ul.pager li
+{
+    display: inline;
+    list-style: none;
+    margin: 0 2px 0 2px;
+}
+
+.loading-indicator
+{
+    background: url("../../../images/icons/ajax-loader.gif") no-repeat 0 10px;
+    padding: 10px 10px 10px 20px;
+    margin-left: 10px;
+}
+
+.capabilitiesParent {
+    display: block;
+    float: none;
+    margin-top: 10px;
+    overflow: hidden;
+    width: auto;
+}
+
+.capabilitiesParent .ui-tabs-nav {
+    border-right: 1px solid #bbb;
+    float: left;
+    margin: 20px 0 0 0;
+    padding-bottom: 11px;
+    width: 178px;
+}
+
+.capabilitiesParent .ui-tabs-nav li {
+    background: transparent;
+    border: 1px solid #bbb;
+    display: block;
+    float: none;
+    margin: 0 -1px -1px 6px;
+    padding: 0;
+    overflow: hidden;
+}
+
+.capabilitiesParent .ui-tabs-nav li.ui-state-active {
+    border-right: 0;
+    margin-left: 0;
+}
+
+.capabilitiesParent .ui-tabs-nav li a {
+    background: #f0f0f0;
+    color: #333;
+    display: block;
+    font-weight: bold;
+    outline: 0;
+    padding: 0.4em 0.5em 0.2em;
+    text-decoration: none;
+}
+
+.capabilitiesParent .ui-tabs-nav li.ui-state-active a {
+    background: #fff;
+}
+
+.capabilitiesParent .ui-tabs-panel {
+    border-color: #bbb;
+    border-style: solid;
+    border-width: 1px 0 0 1px;
+    margin: 10px 0 0 178px;
+    padding: 10px 0 10px 20px;
+}
+.capabilitiesParent .bambooForm {
+    clear: none;
+    display: block;
+    float: none;
+}
+
+.capabilitiesParent .buttons {
+    margin-top: 5px;
+}
+
+table.capabilities
+{
+    margin: 0;
+}
+
+table.capabilities td.agentCell
+{
+    white-space: nowrap;
+}
+
+table.capabilities td.valueCell
+{
+    width: 50%;
+}
+
+table.capabilities td
+{
+    line-height: 100%;
+    padding: 5px 5px ;
+    /*margin: 0;*/
+}
+
+table.requirements td.labelPrefixCell
+{
+    width: 30%;
+}
+
+table td.noRightBorder, table th.noRightBorder
+{
+    border-right: none;
+}
+
+table td.noLeftBorder , table th.noLeftBorder
+{
+    border-left: none;
+}
+
+
+table#requirements .noAgents *
+{
+    background-color: #fcc;
+    color: red;
+    font-weight: bold;
+}
+
+table#requirements .labelPrefixCell span
+{
+    text-transform: lowercase;
+}
+table#requirements .labelPrefixCell
+{
+    width: 5em;
+    border-right: none;
+}
+
+table#requirements .labelCell
+{
+    font-weight: bold;
+    white-space: nowrap;
+    width: 1%;
+    padding-right: 1em;
+    border-right: none;
+    border-left: none;
+}
+
+table#requirements td.matchingAgents
+{
+    width: 8.5em;
+    text-align: right;
+}
+
+table#requirements .valueCell
+{
+    width: 2em;    
+    border-left: none;
+    border-right: none;    
+}
+
+table#requirements .valueCell2
+{
+    border-left: none;
+}
+
+table.agentPlanMatrix th {
+    font-weight: normal;
+}
+
+table.agentPlanMatrix .planHeading {
+    width: 20%;
+}
+
+table.agentPlanMatrix .agentHeading {
+    vertical-align: middle;
+    text-align: center;
+    width: 10%;
+}
+
+table.agentPlanMatrix .checkboxCell {
+    text-align: center;
+    padding: 0;
+    vertical-align: middle;
+}
+
+tr.agentOffline *
+{
+    color: #999999;
+}
+
+table.unitTestSummaryTable .c1 {
+    width: 35%;
+}
+
+table.unitTestSummaryTable .c2 {
+    width: 45%;
+    border: 1px solid #CCCCCC;
+}
+
+#amazonLogs
+{
+    display: block;
+    margin-top: 5px;
+    width: 100%;
+    border: 1px #ccc solid;
+    height: 200px;
+}
+
+
+/* Bamboo Dropdown overrides */
+.section .aui-dropdown {
+    margin-left: 0;
+}
+
+/* For split Dropdowns */
+.aui-dd-parent .drop-wrap {
+    border-left: 1px dotted #999;
+    display: inline-block;
+    height: 15px;
+    margin-left: 2px;
+    padding-left: 2px;
+}
+.aui-dd-parent .drop-wrap .aui-dropdown-trigger {
+    display: inline-block;
+}

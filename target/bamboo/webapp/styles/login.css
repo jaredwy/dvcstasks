@@ -1,0 +1,20 @@
+
+#loginContent {
+    background: #fff;
+    border: 1px solid #bbb;
+    -moz-border-radius: 0.4em;
+    -webkit-border-radius: 0.4em;
+    border-radius: 0.4em;
+    margin: 1em auto;
+    min-width: 250px;
+    padding: 1em;
+    width: 460px;
+}
+
+#loginContent .captcha-image {
+    border: 1px dashed #bbb;
+}
+
+#loginContent .buttons {
+    margin-top: 10px;
+}

@@ -1,0 +1,184 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+body {
+    background: #000;
+    color: #fff;
+    font-family: Helvetica, Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+
+h2 {
+    color: #fff;
+    font-size: 38px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.no-builds{
+    text-align: center;
+}
+
+.build {
+    float: left;
+    margin-bottom: 40px;
+    cursor: pointer;
+    width: 25%;
+}
+
+.build .result {
+    height: 115px;
+    border-right: 2px solid black;
+    padding-top: 10px;
+}
+
+.build .result .icon{
+     filter: alpha(opacity = 50);
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+}
+
+.build .plan-name {
+    padding: 10px 5px 5px 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.build .project-name {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.build .Successful {
+    background-color: #339933;
+}
+
+.build .Successful .plan-name {
+    background-color: #50A751;
+    border-top: 1px solid #2E892E;
+    border-bottom: 1px solid #2E892E;
+}
+
+.build .Failed {
+    background-color: #962526;
+}
+
+.build .Failed .plan-name {
+    background-color: #BE3233;
+    border-top: 1px solid #872121;
+    border-bottom: 1px solid #872121;
+}
+
+.build .executing{
+}
+
+.build .build-details {
+    padding-top: 10px;
+    text-align: center;
+}
+
+.build .build-details .time {
+    margin-top: 5px;
+    filter: alpha(opacity = 50);
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+}
+
+.build .reason {
+    font-weight: normal;
+    font-size: 1.1em;
+    text-align: center;
+    padding: 10px 5px;
+    filter: alpha(opacity = 60);
+    -moz-opacity: 0.6;
+    -khtml-opacity: 0.6;
+    opacity: 0.6;
+}
+
+.build .reason a {
+    font-weight: normal;
+    font-size: 1em;
+    text-align: center;
+    padding-top: 10px;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.build .details-ext {
+    display: none;
+    position: relative;
+    font-weight: normal;
+    font-size: .9em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    z-index: 1;
+    border-bottom: 2px solid #000;
+}
+
+.build .Successful .details-ext {
+    background-color: #339933;
+}
+
+.build .Failed .details-ext {
+    background-color: #962526;
+}
+
+.build .details-ext .details-ext-content {
+    padding-left: 10px;
+}
+
+.build .details-ext .details-ext-content td {
+    vertical-align: top;
+}
+
+.build .details-ext .details-ext-content th {
+    vertical-align: top;
+    text-align: right;
+    padding-right: 5px;
+}
+
+.indicator{
+    position:absolute; margin-left:10px; font-size:1.5em
+}
+
+#error-blanket {
+    background: #000;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    opacity: 0.6;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#error-refreshing {
+    background: #000;
+    border: 1px solid #333;
+    -webkit-box-shadow: 2px 2px 5px #000;
+    -moz-box-shadow: 2px 2px 5px #000;
+    box-shadow: 2px 2px 5px #000;
+    color: #fff;
+    font-weight: bold;
+    left: 50%;
+    margin: 0 0 0 -220px;
+    padding: 20px;
+    position: absolute;
+    top: 200px;
+    width: 400px;
+    z-index: 1;
+}

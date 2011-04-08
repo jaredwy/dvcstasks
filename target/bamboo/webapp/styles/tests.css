@@ -1,0 +1,115 @@
+.tests-table-container {
+    margin-top: 1em;
+    position: relative;
+}
+/* overriding Bamboo's table styles */
+.tests-table.aui {
+    table-layout: fixed;
+    width: 100%;
+}
+.tests-table a {
+    text-decoration: none;
+}
+.tests-table a:hover {
+    text-decoration: underline;
+}
+.tests-table th {
+    border: 0;
+}
+.tests-table td {
+    border-left: 0;
+    border-right: 0;
+}
+.tests-table caption {
+    font-size: 1.25em;
+}
+.tests-table caption > span {
+    display: block;
+    font-weight: bold;
+    text-align: left;
+}
+.tests-table.aui > thead > tr > td { /* compensating for rule not in AUI */
+    background: #f0f0f0;
+}
+.tests-table.aui > tbody > tr > td {
+    border-top: 1px dotted #ccc;
+}
+.tests-table.aui .zebra,
+.tests-table .zebra > td {
+    background: transparent;
+}
+.tests-table .collapsed + .stack-trace {
+    display: none;
+}
+.tests-table .stack-trace .code {
+    background: #f9f9f9;
+    border-bottom: 2px solid #ccc;
+    border-top: 0;
+    color: #000;
+    overflow: visible;
+    padding: 0;
+}
+.tests-table .stack-trace .code > pre {
+    border-top: 1px dotted #ccc;
+    margin: 0;
+    overflow: auto;
+    padding: 1.5em;
+}
+.tests-table .twixie,
+.tests-table .status {
+    padding-left: 0;
+    padding-right: 0;
+    width: 16px;
+}
+.tests-table .twixie > span {
+    cursor: pointer;
+}
+.tests-table .failing-since {
+    width: 30%;
+}
+.tests-table td.failing-since > a {
+    color: #c00;
+    font-weight: bold;
+    overflow: hidden;
+    text-decoration: none;
+}
+.tests-table td.failing-since > a:hover {
+    text-decoration: underline;
+}
+.tests-table .reason {
+    color: #585858;
+    font-size: 0.9em;
+    white-space: nowrap;
+}
+.tests-table .job {
+    white-space: nowrap;
+    width: 20%;
+}
+.tests-table .duration {
+    white-space: nowrap;
+    width: 60px;
+}
+
+/* Expand/Collapse all */
+.tests-table .twixie > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0.5em;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.tests-table .twixie > ul > li {
+    float: left;
+    line-height: 21px;
+    margin: 0;
+}
+.tests-table .twixie > ul > .expand-all {
+    margin-right: 10px;
+}
+.successfulTestsText > strong {
+    color: #070;
+}
+.failedTestsText > strong {
+    color: #c00;
+}

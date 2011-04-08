@@ -1,0 +1,1 @@
+raphael is only included here for the startup wizard.  If you need raphael please use the version shipped with AUI

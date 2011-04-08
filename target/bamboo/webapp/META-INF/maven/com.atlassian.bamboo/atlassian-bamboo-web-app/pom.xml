@@ -1,0 +1,479 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <groupId>com.atlassian.bamboo</groupId>
+        <artifactId>atlassian-bamboo-components</artifactId>
+        <version>3.1-m3</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    
+    <groupId>com.atlassian.bamboo</groupId>
+    <artifactId>atlassian-bamboo-web-app</artifactId>
+    <version>3.1-m3</version>
+    
+    <packaging>war</packaging>
+    
+    <name>Atlassian Bamboo Web Application</name>
+    
+    <dependencies>
+        <dependency>
+            <groupId>com.atlassian.sal</groupId>
+            <artifactId>sal-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.atlassian.applinks</groupId>
+            <artifactId>applinks-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.atlassian.applinks</groupId>
+            <artifactId>applinks-host</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.atlassian.applinks</groupId>
+            <artifactId>applinks-spi</artifactId>
+        </dependency>
+
+        <!-- Module dependencies -->
+        <dependency>
+            <groupId>com.atlassian.bamboo</groupId>
+            <artifactId>atlassian-bamboo-web</artifactId>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.atlassian.bamboo</groupId>
+            <artifactId>atlassian-bamboo-test-utils</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Bamboo SHIPPED PLUGINS - ensure parent pom.xml is also updated.-->
+        <dependency>
+            <groupId>com.atlassian.bamboo.plugins</groupId>
+            <artifactId>atlassian-bamboo-plugin-autofavourite</artifactId>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.atlassian.bamboo.plugins</groupId>
+            <artifactId>atlassian-bamboo-plugin-clover</artifactId>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.atlassian.bamboo.plugins.builder</groupId>
+            <artifactId>atlassian-bamboo-plugin-phpbuilder</artifactId>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.atlassian.bamboo.plugins.repository</groupId>
+            <artifactId>atlassian-bamboo-plugin-vcsversion</artifactId>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.atlassian.bamboo.plugins.labeller</groupId>
+            <artifactId>atlassian-bamboo-plugin-labeller</artifactId>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.atlassian.bamboo.plugins.buildnumberstamper</groupId>
+            <artifactId>atlassian-bamboo-plugin-buildnumberstamper</artifactId>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.atlassian.bamboo.plugins</groupId>
+            <artifactId>atlassian-bamboo-plugin-maven2</artifactId>
+        </dependency>
+
+        <dependency>
+          <groupId>com.atlassian.bamboo.plugins.maven</groupId>
+          <artifactId>atlassian-bamboo-plugin-maven</artifactId>
+        </dependency>
+
+        <dependency>
+          <groupId>com.atlassian.bamboo.plugins.ant</groupId>
+          <artifactId>atlassian-bamboo-plugin-ant</artifactId>
+        </dependency>
+
+        <dependency>
+          <groupId>com.atlassian.bamboo.plugins.testresultparser</groupId>
+          <artifactId>atlassian-bamboo-plugin-testresultparser</artifactId>
+        </dependency>
+
+        <dependency>
+          <groupId>com.atlassian.bamboo.plugins.scripttask</groupId>
+          <artifactId>atlassian-bamboo-plugin-scripttask</artifactId>
+        </dependency>
+
+        <dependency>
+          <groupId>com.atlassian.bamboo.plugins.php</groupId>
+          <artifactId>atlassian-bamboo-plugin-php</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.atlassian.bamboo.plugins.builder</groupId>
+            <artifactId>atlassian-bamboo-plugin-grails</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.atlassian.bamboo.plugins.fisheyecommitviewer</groupId>
+            <artifactId>atlassian-bamboo-plugin-fisheyecommitviewer</artifactId>
+        </dependency>
+
+        <dependency>
+          <groupId>com.atlassian.bamboo.plugins.dummytask</groupId>
+          <artifactId>atlassian-bamboo-plugin-dummytask</artifactId>
+        </dependency>
+
+        <dependency>
+          <groupId>com.atlassian.bamboo.plugins.compatibilitytask</groupId>
+          <artifactId>atlassian-bamboo-plugin-compatibility-task</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.atlassian.bamboo.plugins.triggercondition</groupId>
+            <artifactId>atlassian-bamboo-plugin-triggercondition</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.atlassian.bamboo.plugins.nant</groupId>
+            <artifactId>nant_builder</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.atlassian.bamboo.plugins</groupId>
+            <artifactId>atlassian-bamboo-plugin-git</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.atlassian.bamboo.maven.sharing</groupId>
+            <artifactId>bamboo-maven-artifact-sharing-plugin</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.atlassian.bamboo.plugins</groupId>
+            <artifactId>atlassian-bamboo-plugin-mercurial</artifactId>
+        </dependency>
+
+        <!-- Ensure that bundled modules aren't added twice but is still built before -->
+        <dependency>
+            <groupId>com.atlassian.bamboo</groupId>
+            <artifactId>atlassian-bamboo-bundled-plugins</artifactId>
+            <type>pom</type>
+            <scope>provided</scope>
+        </dependency>
+        
+        <!-- Hack for some weird mvn bug -->
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib-nodep</artifactId>
+        </dependency>
+        
+        <!--another hack for weird mvn bug - testtools with test scope excludes this-->
+        <dependency>
+            <groupId>dom4j</groupId>
+            <artifactId>dom4j</artifactId>
+        </dependency>
+        
+        <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+        </dependency>
+
+        <dependency>
+          <groupId>com.atlassian.security.auth.trustedapps</groupId>
+          <artifactId>atlassian-trusted-apps-core</artifactId>
+        </dependency>
+
+    </dependencies>
+    
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-surefire-plugin</artifactId>
+              <configuration>
+                <!-- makes it a little easier to isloate the cause of the spring hibernate tests when they fail -->
+                <forkMode>always</forkMode>
+              </configuration>
+            </plugin>
+            
+            <!-- Plugin for packaging the agent jars-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>copy</goal>
+                        </goals>
+                        <configuration>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>com.atlassian.bamboo</groupId>
+                                    <artifactId>atlassian-bamboo-agent-installer</artifactId>
+                                    <outputDirectory>${project.build.directory}/${project.artifactId}/admin/agent</outputDirectory>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>com.atlassian.bamboo</groupId>
+                                    <artifactId>bamboo-agent</artifactId>
+                                    <outputDirectory>${project.build.directory}/${project.artifactId}/admin/agent</outputDirectory>
+                                </artifactItem>
+                            </artifactItems>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            
+            <!-- Plugins for bundled Atlassian plugins 2.0 -->
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <version>2.0.0</version>
+            </plugin>
+            
+            <!-- Bundling plugins-->
+            <plugin>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>copy-bundled-plugins</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>copy</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${pluginBundleDirectory}</outputDirectory>
+                            <artifactItems>
+                                
+                                <!-- ========================================================================================== REST -->
+                                <!-- REST Plugin module type -->
+                                <artifactItem>
+                                    <groupId>com.atlassian.plugins.rest</groupId>
+                                    <artifactId>atlassian-rest-module</artifactId>
+                                </artifactItem>
+                                
+                                <!-- Bundle required by REST -->
+                                <artifactItem>
+                                    <groupId>biz.aQute</groupId>
+                                    <artifactId>bndlib</artifactId>
+                                    <version>0.0.255</version>
+                                </artifactItem>
+
+                                <artifactItem>
+                                    <groupId>com.atlassian.bundles</groupId>
+                                    <artifactId>json</artifactId>
+                                    <version>${json.version}</version>
+                                </artifactItem>
+
+                                <artifactItem>
+                                    <groupId>com.atlassian.upm</groupId>
+                                    <artifactId>atlassian-universal-plugin-manager-plugin</artifactId>
+                                    <version>${upm.version}</version>
+                                </artifactItem>
+                                
+                                <artifactItem>
+                                    <groupId>com.atlassian.templaterenderer</groupId>
+                                    <artifactId>atlassian-template-renderer-api</artifactId>
+                                    <version>${atlassian.renderer.version}</version>
+                                </artifactItem>
+                                
+                                <artifactItem>
+                                    <groupId>com.atlassian.templaterenderer</groupId>
+                                    <artifactId>atlassian-template-renderer-velocity16-plugin</artifactId>
+                                    <version>${atlassian.renderer.version}</version>
+                                </artifactItem>
+                                
+                                <!--<artifactItem>-->
+                                <!--<groupId>com.atlassian.plugin.rest</groupId>-->
+                                <!--<artifactId>atlassian-rest-plugin-manager-plugin</artifactId>-->
+                                <!--<version>0.4</version>-->
+                                <!--</artifactItem>-->
+                                
+                                <!-- =========================================================================================== SAL -->
+                                <!-- Bamboo's SAL implementation -->
+                                <artifactItem>
+                                    <groupId>com.atlassian.bamboo.plugins</groupId>
+                                    <artifactId>atlassian-bamboo-plugin-sal</artifactId>
+                                </artifactItem>
+                              <!-- =========================================================================================== OAUTH -->
+                              <artifactItem>
+                                <groupId>com.atlassian.oauth</groupId>
+                                <artifactId>atlassian-oauth-api</artifactId>
+                                <version>${oauthVersion}</version>
+                              </artifactItem>
+
+                              <artifactItem>
+                                <groupId>com.atlassian.oauth</groupId>
+                                <artifactId>atlassian-oauth-service-provider-plugin</artifactId>
+                                <version>${oauthVersion}</version>
+                              </artifactItem>
+
+                              <artifactItem>
+                                <groupId>com.atlassian.oauth</groupId>
+                                <artifactId>atlassian-oauth-admin-plugin</artifactId>
+                                <version>${oauthVersion}</version>
+                              </artifactItem>
+                           
+                              <artifactItem>
+                                <groupId>org.apache.httpcomponents</groupId>
+                                <artifactId>httpcore-osgi</artifactId>
+                                <version>4.0</version>
+                              </artifactItem>
+
+                              <artifactItem>
+                                <groupId>org.apache.httpcomponents</groupId>
+                                <artifactId>httpclient-osgi</artifactId>
+                                <version>4.0-beta2</version>
+                              </artifactItem>
+
+                              <artifactItem>
+                                <groupId>com.atlassian.oauth</groupId>
+                                <artifactId>atlassian-oauth-service-provider-spi</artifactId>
+                                <version>${oauthVersion}</version>
+                              </artifactItem>
+
+                              <artifactItem>
+                                <groupId>com.atlassian.oauth</groupId>
+                                <artifactId>atlassian-oauth-service-provider-sal-plugin</artifactId>
+                                <version>${oauthVersion}</version>
+                              </artifactItem>
+
+                              <artifactItem>
+                                <groupId>com.atlassian.oauth</groupId>
+                                <artifactId>atlassian-oauth-consumer-spi</artifactId>
+                                <version>${oauthVersion}</version>
+                              </artifactItem>
+
+                              <artifactItem>
+                                <groupId>com.atlassian.oauth</groupId>
+                                <artifactId>atlassian-oauth-consumer-plugin</artifactId>
+                                <version>${oauthVersion}</version>
+                              </artifactItem>
+
+                              <artifactItem>
+                                <groupId>com.atlassian.oauth</groupId>
+                                <artifactId>atlassian-oauth-consumer-sal-plugin</artifactId>
+                                <version>${oauthVersion}</version>
+                              </artifactItem>
+
+                              <!-- ======================================================================================= Gadgets -->
+                              <!-- Atlassian Gadgets API JAR -->
+                              <artifactItem>
+                                <groupId>com.atlassian.gadgets</groupId>
+                                <artifactId>atlassian-gadgets-api</artifactId>
+                                <version>${atlassian.gadgets.version}</version>
+                              </artifactItem>
+
+                              <!--Atlassian Gadgets SPI -->
+                              <artifactItem>
+                                <groupId>com.atlassian.gadgets</groupId>
+                                <artifactId>atlassian-gadgets-spi</artifactId>
+                                <version>${atlassian.gadgets.version}</version>
+                              </artifactItem>
+
+                              <!--Atlassian Gadgets Renderer -->
+                              <!--<artifactItem>-->
+                              <!--<groupId>com.atlassian.gadgets</groupId>-->
+                              <!--<artifactId>atlassian-gadgets-renderer-plugin</artifactId>-->
+                              <!--<version>${atlassian.gadgets.version}</version>-->
+                              <!--</artifactItem>-->
+
+                              <!--Gadget Spec Publisher -->
+                              <artifactItem>
+                                <groupId>com.atlassian.gadgets</groupId>
+                                <artifactId>atlassian-gadgets-publisher-plugin</artifactId>
+                                <version>${atlassian.gadgets.version}</version>
+                              </artifactItem>
+
+                              <!-- Required by com.atlassian.bundles:guava -->
+                              <artifactItem>
+                                <groupId>com.atlassian.bundles</groupId>
+                                <artifactId>jsr305</artifactId>
+                                <version>1.1</version>
+                              </artifactItem>
+
+                              <!-- =========================================================================== REST Bundled plugin -->
+                              <artifactItem>
+                                <groupId>com.atlassian.bamboo.plugins</groupId>
+                                <artifactId>atlassian-bamboo-plugin-rest</artifactId>
+                              </artifactItem>
+
+                              <!-- =========================================================================== Feedback bundled plugin -->
+                              <artifactItem>
+                                <groupId>com.atlassian.bamboo.plugins</groupId>
+                                <artifactId>atlassian-bamboo-plugin-feedback</artifactId>
+                              </artifactItem>
+
+                              <!-- =========================================================================== Bundled gadgets plugin -->
+
+                              <artifactItem>
+                                <groupId>com.atlassian.bamboo.gadgets</groupId>
+                                <artifactId>atlassian-bamboo-gadgets</artifactId>
+                              </artifactItem>
+
+                              <!-- =========================================================================== AUI -->
+                              <artifactItem>
+                                <groupId>com.atlassian.aui</groupId>
+                                <artifactId>auiplugin</artifactId>
+                              </artifactItem>
+
+                              <artifactItem>
+                                <groupId>com.atlassian.streams</groupId>
+                                <artifactId>streams-bamboo-plugin</artifactId>
+                              </artifactItem>
+                                
+                              <artifactItem>
+                                <groupId>com.atlassian.applinks</groupId>
+                                <artifactId>applinks-plugin</artifactId>
+                              </artifactItem>
+
+                            </artifactItems>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            
+            <!-- Creating the zip-->
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.2-beta-1</version>
+                <configuration>
+                    <finalName>atlassian</finalName>
+                    <descriptors>
+                        <descriptor>src/main/assembly/bundled-plugins.xml</descriptor>
+                    </descriptors>
+                    <outputDirectory>${project.build.outputDirectory}</outputDirectory>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>create-bundled-plugins</id>
+                        <!--
+                so that it happens just after the unit tests ran successfuly
+                it should be changes to pre-package when maven 2.1 is out
+            -->
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>attached</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+    
+    <properties>
+        <pluginBundleDirectory>target/bundled-plugins</pluginBundleDirectory>
+    </properties>
+</project>

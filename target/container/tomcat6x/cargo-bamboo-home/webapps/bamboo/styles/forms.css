@@ -1,0 +1,627 @@
+/* Form related styles */
+
+/* Form tags */
+optgroup {
+    background-color: #f7f7f7;
+    font-weight: normal;
+    color: #666;
+}
+optgroup option {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Bamboo Form */
+.bambooForm {
+    float: left;
+    clear: left;
+    width: 100%;
+}
+
+.bambooAuiDialogForm {
+	border-top: 0;
+	border-bottom: 0;
+    background-color: #fff;
+}
+
+.bambooAuiDialogForm .fieldLabelArea {
+    font-size: 12px;
+    font-weight:bold;
+    color: #003366;
+}
+
+.bambooAuiDialogForm ul.actionErrorList {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.bambooAuiDialogForm .build-description {    
+    display: block;
+    margin: 0 26px 10px 0;
+    padding-left: 20px;
+    font-weight: normal;
+}
+
+.bambooAuiDialogForm .build-description > a {
+    font-weight : bold;
+}
+
+.hideHeadingSection
+{
+    border-top: none;
+    /*padding-top: 5px;*/
+}
+
+.tabContent .bambooForm
+{
+    margin-top: 10px;
+}
+
+#tabContainer .tabContent .bambooForm
+{
+    margin: 10px 5px 10px 5px;
+    width: 99%;
+}
+
+.bambooForm input[type=reset], .bambooForm input[type=submit], .bambooForm input[type=button], .bambooForm button {
+    min-width: auto !important; /* hack for ie */
+    min-width: 80px;
+}
+
+.bambooForm .formActionsBar {
+    margin-left: 1em;
+}
+
+.bambooForm .formCompleteContentSelectionStatus {
+    border: solid #ccc;
+    border-width: 1px 0;
+
+    margin: 0.5em 0;
+    padding: 0.5em 0;
+}
+
+.bambooForm .formActionsBar input, .bambooForm .formActionsBar button {
+    min-width: 0;
+    vertical-align: middle;
+}
+
+.bambooForm input, .bambooForm label
+{
+    vertical-align: bottom;
+}
+
+/* Used for field label separtion e.g. OR */
+.bambooForm .sectionSubHeader {
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Sub area h1 */
+.descriptionSection {
+    padding: 4px 4px 4px 0;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 10px;
+    border: none;
+    line-height: 110%;
+}
+
+.bambooForm fieldset {
+    margin-bottom: 0;
+}
+
+.bambooForm .formFooter {
+    padding: 5px 0;
+}
+
+.noTopBorder
+{
+    border-top: none!important;
+}
+
+.bambooForm .formFooter.wizardFooter {
+    text-align: right;
+}
+
+.bambooForm .formFooter.wizardFooter #cancelButton{
+    margin-left: 10px;
+}
+
+
+.bambooForm .fieldAreaError{
+}
+
+.bambooForm .fieldArea .errorBox {
+    color: #cc0000;
+    font-weight: bold;
+}
+
+.bambooForm .fieldArea {
+    clear: left;
+    margin: 0 0 0 1em;
+	padding-bottom: 1px;
+}
+
+.bambooForm .fieldArea label.fieldLabelArea, .bambooForm .fieldArea .firstColumn {
+	display: inline;
+	position: relative;
+	float: left;
+	margin-top: 0.15em;
+	padding: 0 0 5px 0;
+
+}
+
+.bambooForm .fieldArea .fieldValueArea
+{
+}
+
+.fieldDescription {
+	margin: 3px 0 0 0;
+	padding: 0 0 5px 0;
+	font-size: 95%;
+    line-height: 100%;
+    color: #7F7F7F;
+}
+
+/* Special styles for checlbox*/
+
+.bambooForm label.labelForCheckbox, .bambooForm .checkboxArea .fieldDescription {
+    float: none;
+    display: block;
+    padding: 0;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.radioOptionDescription
+{
+    margin-top: 0;
+    margin-left: 20px;
+}
+
+.bambooForm .checkboxLabel {
+}
+
+.bambooForm .checkboxErrorLabel {
+    color: red;
+}
+
+.bambooForm span.required {
+    color: red;
+}
+
+.bambooForm .fieldLabelArea .required
+{
+	position: absolute;
+	top: 0;
+	height: 8px;
+	margin: 0 0 0 -4px;
+    vertical-align: top;
+}
+
+.bambooForm .aui-message {
+    margin: 1em;
+}
+form.aui .aui-message.error {
+    color: inherit;
+}
+form.aui .aui-message p {
+    padding: 0;
+}
+
+.buttons {
+    text-align: center;
+    margin: 0 auto;
+}
+form.aui .buttons {
+    text-align: inherit;
+}
+form.aui .buttons .icon {
+    margin-right: 5px;
+}
+
+.emphasise a {
+    font-weight: bold;
+}
+
+.bambooForm span.note {
+    background: #fff;
+    color: #999;
+    font-size: 0.92em;
+    margin: 0 0 0 5px;
+}
+
+.plan-requirements .formFooter {
+    overflow: auto;
+    padding: 0.6em 0.5em 0.5em;
+}
+
+.plan-requirements .formFooter .button-link {
+    margin: -0.2em 0 0 1em;
+}
+
+.button-link,
+    .button-link:link,
+    .button-link:visited,
+    .button-link:hover {
+    background: #f0f0f0;
+    border: 1px solid #fafafa;
+    border-right: 1px solid #848484;
+    border-bottom: 1px solid #848484;
+    color: #000;
+    padding: 0.2em 0.4em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.button-link:active,
+    .button-link:focus {
+    background: #f0f0f0;
+    border: 1px solid #848484;
+    border-right: 1px solid #fafafa;
+    border-bottom: 1px solid #fafafa;
+    color: #000;
+    text-decoration: none;
+}
+
+form.capability-types .descriptionSection {
+    overflow: auto;
+}
+
+form.capability-types fieldset {
+    border: 1px solid #aaa;
+    display: block;
+    float: left;
+    margin: 0 0 10px 30px;
+    padding: 4px 4px 0 0;
+    position: relative;
+    width: auto;
+}
+
+form.capability-types fieldset span.alternate {
+    background: #f5f8fb;
+    color: #326ca6;
+    left: -30px;
+    position: absolute;
+    text-transform: uppercase;
+    top: -6px;
+}
+
+form.capability-types fieldset label {
+    float: left;
+    margin: 0 0 4px 0;
+    width: auto;
+}
+
+form.capability-types fieldset #builder-path-label {
+    clear: both;
+}
+
+form.capability-types fieldset label span {
+    display: block;
+    float: left;
+    line-height: 2;
+    text-align: right;
+    padding: 0 5px 0 0;
+    width: 100px;
+}
+
+form.capability-types fieldset label input {
+    width: 210px;
+}
+
+form.capability-types fieldset label input#builder-path {
+    width: 533px;
+}
+
+form.capability-types fieldset.disabled label input {
+    background: #f5f8fb;
+}
+
+#add-requirement .descriptionSection {
+    overflow: auto;
+}
+
+#add-requirement fieldset {
+    border: none;
+}
+
+/* Width Styles. Standard is a 13em column and the narrow one is a 6em column */
+
+/* A style for use when there is no first column*/
+.bambooForm .fieldArea {
+	padding-left: 14em;
+}
+
+#choosePlansForBulkAction .fieldArea {
+    padding-left: 2em;
+}
+
+.bambooForm .fieldArea label.fieldLabelArea, .bambooForm .fieldArea .firstColumn {
+	left: -14em;
+	width: 13em;
+	margin-right: -13em;
+}
+
+.bambooForm .fieldLabelArea .required
+{
+	left: 13em;
+}
+
+.bambooForm.narrowForm .fieldArea {
+	padding-left: 7em;
+}
+
+.bambooForm.narrowForm .fieldArea label.fieldLabelArea, .bambooForm .fieldArea .firstColumn {
+	left: -7em;
+	width: 6em;
+	margin-right: -6em;
+}
+
+.bambooForm.narrowForm .fieldLabelArea .required
+{
+	left: 6em;
+}
+
+.bulk-project-bar {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 5px;
+    padding-top: 3px;
+    overflow: hidden;
+}
+
+.bulk-project-bar .bulk-project-name {
+    color: #000;
+    font-weight: bold;
+    float: left;
+}
+
+.bulk-project-bar .bulk-project-name div.checkbox{
+    display: inline-block;
+    padding: 0 !important;
+}
+
+.bulk-project-links {
+    color: #505050;
+    float: right;
+    font-weight: normal;
+}
+
+.bulk-plan {
+    overflow: hidden;
+}
+
+.bulk-plan-left {
+    float: left;
+}
+
+.bulk-plan-right {
+    border-left: 1px solid #ddd;
+    float: right;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    width: 79%;
+}
+
+.bulk-plan-name > div.checkbox {
+    padding: 0 0 0 40px !important;
+}
+
+.bulk-command {
+    color: #505050;
+}
+
+.bulk-job {
+    margin-left: 1em;
+}
+
+.bulk-job > div.checkbox {
+    padding: 0 !important;
+}
+
+.bulk-job-links {
+    color: #505050;
+    padding-left: 4px;
+}
+
+.bambooForm .buildExpiryIndent {
+    margin-left: 2em;
+}
+
+/* checkbox control */
+/* firefox */
+.checkboxArea input[type=checkbox] {
+    position: relative;
+    top: 2px;
+}
+/* safari */
+@media screen and (-webkit-min-device-pixel-ratio:0){
+	.checkboxArea input[type=checkbox] {
+         top: 0;
+    }
+}
+
+.cron-builder .icon {
+    padding-left: 5px;
+}
+
+.cronEditorForm {
+    border-top: 1px solid #F0F0F0;
+    padding-left: 140px;
+    padding-top: 20px;
+}
+
+form.aui .cronEditorForm div.checkbox,
+form.aui .cronEditorForm div.radio,
+form.aui .cronEditorForm .field-group {
+    padding-left: 0;
+}
+
+.cronEditorForm .timeForm .textField {
+    width: 3em;
+}
+
+.cronEditorForm .monthForm select {
+    margin-left: 3px;
+}
+
+
+form.aui .cronEditorForm div.matrix {
+    width: 250px;
+}
+
+form.aui .cronEditorForm  div.matrix div.checkbox {
+    width: 125px;
+}
+
+/*Overide for aui-forms.css*/
+form.aui .cronEditorForm fieldset .field-group,
+form#returnCronExpression fieldset .field-group {
+    margin-bottom: 0;
+    min-height: 0;
+    padding-top: 0;
+}
+
+form#returnCronExpression div.radio {
+    float: left;
+    padding: 0 0 5px 30px;
+}
+
+.popupRemoveErrorLogForm
+{
+    display: none;
+}
+
+.planCheckboxList {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.planCheckboxList .fieldLabelArea {
+    padding-left: 12px;
+    width: 13px;
+    float: left;
+}
+
+.planCheckboxList .checkboxArea {
+    clear: none;
+}
+
+.form-view {
+    line-height: 1.4;
+    margin: 0 0 2em;
+    position: relative;
+}
+.form-view fieldset {
+    border: 0;
+    display: block;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    position: relative;
+}
+.form-view .field-group {
+    clear: both;
+    display: block;
+    margin-bottom: 5px;
+    min-height: 1.6em;
+    padding: 0 0 5px 140px;
+}
+.form-view .field-group:last-child,
+.form-view fieldset fieldset:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.form-view .field-group label {
+    color: #505050;
+    float: left;
+    display: block;
+    left: -140px;
+    line-height: 1;
+    margin-right: -130px;
+    padding-top: 4px;
+    position: relative;
+    width: 130px;
+    text-align: right;
+}
+.form-view div.description {
+    font-size: 11px;
+}
+.form-view .field-value {
+    display: inline-block;
+    line-height: 1;
+    padding-top: 4px;
+}
+.form-view.form-view-header {
+    margin-bottom: 0;
+}
+
+/* AUI toolbar customization */
+.aui-toolbar .disabled, .aui-toolbar.disabled span {
+    opacity: 0.5;
+}
+.aui-toolbar .active, .aui-toolbar .active span {
+    opacity: 1;
+}
+.toolbar-group .toolbar-item:first-of-type span {
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.toolbar-group .toolbar-item:last-of-type span {
+    -webkit-border-top-right-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    -moz-border-radius-topright: 3px;
+    -moz-border-radius-bottomright: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+
+/* copied from AUI's forms.css form.aui h2 */
+.form-view h2 {
+    border-bottom: 1px solid #ddd;
+    /*clear: both;*/ /* difference from AUI */
+    color: #222;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.form-view h2.has-aui-toolbar {
+    line-height: 1.6em;
+}
+
+.form-view > .aui-toolbar {
+    float: right;
+    padding: 4px 5px 0 0;
+    vertical-align: middle;
+    text-align: right;
+}
+
+.aui-toolbar.inline {
+    background: transparent;
+    border-top: none;
+    clear: none;
+    padding: 0;
+    width: auto;
+}
+.aui-toolbar.inline .toolbar-group {
+    margin: 0;
+}
+.aui-toolbar > .toolbar-group > .toolbar-item .aui-dropdown > .dropdown-item > a {
+    display: block;
+    text-decoration: none;
+}
+.aui-toolbar > .toolbar-group > .toolbar-item > .toolbar-trigger .icon-drop:hover {
+    background: url(../../../images/menu_indicator_for_light_backgrounds.gif) no-repeat 50% 50%;
+}
+.aui-toolbar > .toolbar-group > .toolbar-item.aui-dd-parent > .toolbar-trigger {
+    padding-right: 4px;
+}
+
+/* "long-field" isn't long enough for our licenses */
+form.aui textarea.license-field {
+    width: 610px;
+}

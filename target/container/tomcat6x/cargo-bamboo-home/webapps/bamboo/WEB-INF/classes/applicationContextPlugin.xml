@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <beans xmlns="http://www.springframework.org/schema/beans"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:plugin="http://atlassian.com/schema/spring/plugin"
+         xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+       http://atlassian.com/schema/spring/plugin http://atlassian.com/schema/spring/plugin.xsd">
+
+  <bean id="pluginManager" class="com.atlassian.bamboo.plugin.BambooPluginManager" plugin:available="true">
+    <constructor-arg ref="pluginStateStore"/>
+    <constructor-arg>
+      <list>
+        <ref bean="bundledPluginLoader"/>
+        <ref bean="directoryPluginLoader"/>
+      </list>
+    </constructor-arg>
+    <constructor-arg ref="moduleDescriptorFactory"/>
+    <constructor-arg ref="pluginEventManager"/>
+    <constructor-arg ref="pluginDirectory" />
+  </bean>
+
+  <alias name="pluginManager" alias="pluginAccessor"/>
+  <alias name="pluginManager" alias="pluginController"/>
+
+  <bean id="moduleDescriptorFactory" class="com.atlassian.bamboo.plugin.BambooModuleDescriptorFactory">
+    <constructor-arg ref="hostContainer"/>
+    <property name="moduleDescriptors">
+      <map>
+        <entry key="servlet" value="com.atlassian.plugin.servlet.descriptors.ServletModuleDescriptor"/>
+        <entry key="servlet-context-param" value="com.atlassian.plugin.servlet.descriptors.ServletContextParamModuleDescriptor"/>
+        <entry key="servlet-filter" value="com.atlassian.plugin.servlet.descriptors.ServletFilterModuleDescriptor"/>
+        <entry key="servlet-context-listener" value="com.atlassian.plugin.servlet.descriptors.ServletContextListenerModuleDescriptor"/>
+        <entry key="report" value="com.atlassian.bamboo.plugin.descriptor.ReportCollectorModuleDescriptor"/>
+      </map>
+    </property>
+  </bean>
+
+  <bean id="pluginResourceLocator" class="com.atlassian.plugin.webresource.PluginResourceLocatorImpl" plugin:available="true">
+    <constructor-arg index="0" ref="webResourceIntegration"/>
+    <constructor-arg index="1" ref="servletContextFactory"/>
+    <constructor-arg index="2">
+      <bean class="com.atlassian.plugin.webresource.DefaultResourceBatchingConfiguration"/>
+    </constructor-arg>
+  </bean>
+
+  <bean id="pluginStateStore" class="com.atlassian.bamboo.plugin.BambooPluginStateStore">
+  </bean>
+
+  <bean id="pluginEventManager" class="com.atlassian.plugin.event.impl.DefaultPluginEventManager" plugin:available="true">
+  </bean>
+
+  <bean id="hostContainer" class="com.atlassian.bamboo.plugin.BambooHostContainer">
+  </bean>
+
+  <bean id="moduleFactory" class="com.atlassian.plugin.module.PrefixDelegatingModuleFactory" plugin:available="true">
+      <constructor-arg>
+          <set>
+              <bean class="com.atlassian.plugin.module.ClassPrefixModuleFactory">
+                  <constructor-arg ref="hostContainer"/>
+              </bean>
+              <bean class="com.atlassian.plugin.osgi.module.BeanPrefixModuleFactory"/>
+          </set>
+      </constructor-arg>
+  </bean>
+
+  <!-- Plugin loaders -->
+  <bean id="directoryPluginLoader" class="com.atlassian.plugin.loaders.DirectoryPluginLoader">
+    <constructor-arg index="0" ref="pluginDirectory"/>
+    <constructor-arg index="1">
+      <list>
+        <ref bean="osgiPluginFactory"/>
+        <ref bean="osgiBundleFactory"/>
+        <ref bean="xmlDynamicPluginFactory"/>
+      </list>
+    </constructor-arg>
+    <constructor-arg index="2" ref="pluginEventManager"/>
+  </bean>
+
+  <bean id="xmlDynamicPluginFactory" class="com.atlassian.plugin.factories.XmlDynamicPluginFactory">
+    <constructor-arg ref="applicationKey" />
+  </bean>
+
+
+  <bean id="bundledPluginLoader" class="com.atlassian.bamboo.plugin.loaders.BundledPluginLoaderFactory">
+    <constructor-arg ref="bootstrapManager"/>
+    <constructor-arg>
+      <list>
+        <ref bean="osgiPluginFactory"/>
+        <ref bean="osgiBundleFactory"/>
+        <ref bean="xmlDynamicPluginFactory"/>
+      </list>
+    </constructor-arg>
+    <constructor-arg ref="pluginEventManager"/>
+  </bean>
+
+  <!-- OSGI Related -->
+  <bean id='osgiPluginFactory' class="com.atlassian.plugin.osgi.factory.OsgiPluginFactory">
+    <constructor-arg ref="pluginDescriptorFilename"/>
+    <constructor-arg ref="applicationKey"/>
+    <constructor-arg ref="osgiPersistentCache"/>
+    <constructor-arg ref="osgiContainerManager"/>
+    <constructor-arg ref="pluginEventManager"/>
+  </bean>
+
+  <bean id="osgiBundleFactory" class="com.atlassian.plugin.osgi.factory.OsgiBundleFactory">
+    <constructor-arg ref="osgiContainerManager"/>
+    <constructor-arg ref="pluginEventManager"/>
+  </bean>
+
+  <bean id="osgiPersistentCache" class="com.atlassian.plugin.osgi.container.impl.DefaultOsgiPersistentCache">
+    <constructor-arg ref="pluginCacheDirectory" />
+  </bean>
+
+  <bean id="osgiContainerManager" class="com.atlassian.plugin.osgi.container.felix.FelixOsgiContainerManager">
+    <constructor-arg ref="osgiPersistentCache"/>
+    <constructor-arg ref="packageScannerConfiguration"/>
+    <constructor-arg ref="hostComponentProvider"/>
+    <constructor-arg ref="pluginEventManager"/>
+  </bean>
+
+  <bean id="applinkTypeAccessor" class="com.atlassian.applinks.host.spring.TypeAccessorServiceFactoryBean">
+    <constructor-arg ref="osgiContainerManager"/>
+  </bean>
+
+  <bean id="applinkHostApplication" class="com.atlassian.bamboo.security.applinks.BambooHostApplication" plugin:available="true">
+      <constructor-arg ref="pluginAccessor"/>
+      <constructor-arg ref="applinkTypeAccessor"/>
+      <constructor-arg ref="projectManager"/>
+      <constructor-arg ref="bambooPermissionManager"/>
+      <constructor-arg ref="administrationConfigurationManager"/>
+      <constructor-arg ref="bootstrapManager"/>
+      <constructor-arg ref="applinkApplicationLink"/>
+  </bean>
+
+  <bean id="applinkApplicationLink" class="com.atlassian.applinks.host.spring.ApplicationLinkServiceFactoryBean">
+    <constructor-arg ref="osgiContainerManager"/>
+  </bean>
+
+  <bean id="applinkEntityLink" class="com.atlassian.applinks.host.spring.EntityLinkServiceFactoryBean">
+    <constructor-arg ref="osgiContainerManager"/>
+  </bean>
+
+  <bean id="pluginMetadataManager" class="com.atlassian.plugin.metadata.DefaultPluginMetadataManager" plugin:available="true"/>
+
+  <bean id="packageScannerConfiguration" class="com.atlassian.plugin.spring.SpringAwarePackageScannerConfiguration">
+    <constructor-arg ref="bambooVersion" />
+
+    <property name="packageIncludes">
+      <list>
+        <value>com.atlassian*</value>
+        <value>org.quartz*</value>
+        <value>net.sf.cglib*</value>
+        <value>org.hibernate*</value>
+        <value>com.opensymphony.*</value>
+        <value>freemarker.*</value>
+        <value>org.apache*</value>
+        <value>org.xml.*</value>
+        <value>javax.*</value>
+        <value>org.w3c.*</value>
+        <value>org.codehaus.*</value>
+        <value>com.*</value>
+        <value>org.*</value>
+        <value>net.*</value>
+        <value>org.slf4j*</value>
+        <!-- Required for trusted apps plugin -->
+        <value>org.bouncycastle*</value>
+      </list>
+    </property>
+    <property name="packageExcludes">
+      <list>
+        <value>org.springframework.*</value>
+        <value>org.aopalliance*</value>
+        <value>org.objectweb*</value>
+      </list>
+    </property>
+    <property name="packageVersions">
+      <map>
+        <entry key="org.apache.log4j*" value="1.2.15" />
+        <entry key="org.apache.commons.collections*" value="3.2.1" />
+        <!--This is so oauth works in IDEA, Oauth needs 1.3 but our agent bootstrap requires 1.2-->
+        <entry key="org.apache.commons.codec*" value="1.3.0"/>
+        <entry key="com.atlassian.bamboo*" value-ref="bambooVersionNumber" />
+        <entry key="com.atlassian.breadcrumbs*" value-ref="bambooVersionNumber" />
+        <entry key="org.apache.commons.logging*" value="1.1.1"/>
+      </map>
+    </property>
+  </bean>
+
+
+  <bean id="hostContextAccessor" class="com.atlassian.sal.spring.component.SpringHostContextAccessor" plugin:available="true">
+    <constructor-arg ref="transactionManager"/>
+  </bean>
+
+  <!-- Specific plugin requirements -->
+
+  <bean id="webInterfaceManager" class="com.atlassian.plugin.web.DefaultWebInterfaceManager" plugin:available="true">
+    <property name="pluginManager" ref="pluginManager" />
+    <property name="webFragmentHelper">
+      <bean class="com.atlassian.bamboo.plugin.web.BambooWebFragmentHelper">
+          <property name="templateRenderer" ref="templateRenderer" />
+      </bean>
+    </property>
+  </bean>
+
+  <bean id="webResourceIntegration" class="com.atlassian.bamboo.plugin.webresource.BambooWebResourceIntegration" plugin:available="true">
+    <property name="pluginAccessor">
+      <ref local="pluginManager"/>
+    </property>
+  </bean>
+
+  <bean id="webResourceManager" class="com.atlassian.plugin.webresource.WebResourceManagerImpl" plugin:available="true">
+    <constructor-arg ref="webResourceIntegration" />
+    <constructor-arg ref="pluginResourceLocator" />
+  </bean>
+
+  <bean id="servletContextFactory" class="com.atlassian.bamboo.plugin.BambooServletContextFactory" />
+
+  <bean id="servletModuleManager" class="com.atlassian.plugin.spring.SpringServletModuleManager" plugin:available="true">
+    <constructor-arg index="0" ref="pluginEventManager"/>
+  </bean>
+
+  <!-- Download Strategies -->
+  <bean name="bambooContentTypeResolver" class="com.atlassian.bamboo.plugin.servlet.BambooContentTypeResolver" init-method="init">
+  </bean>
+
+  <bean id="pluginDownload" class="com.atlassian.plugin.servlet.PluginResourceDownload">
+    <constructor-arg index="0" ref="pluginResourceLocator"/>
+    <constructor-arg index="1" ref="bambooContentTypeResolver"/>
+    <constructor-arg index="2" ref="characterEncoding"/>
+  </bean>
+
+  <bean id="artifactDownloadStrategy" class="com.atlassian.bamboo.plugin.servlet.ArtifactDownloadStrategy" >
+    <constructor-arg ref="bambooPermissionManager"/>
+    <constructor-arg ref="bambooContentTypeResolver"/>
+  </bean>
+  
+  <bean id="downloadStrategies" class="java.util.ArrayList">
+    <constructor-arg index="0">
+      <list>
+        <ref bean="pluginDownload"/>
+        <ref bean="artifactDownloadStrategy"/>
+      </list>
+    </constructor-arg>
+  </bean>
+
+  <!-- Properties -->
+  <bean id="pluginDescriptorFilename" class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean">
+    <property name="staticField" value="com.atlassian.bamboo.plugin.BambooPluginUtils.PLUGIN_DESCRIPTOR_FILENAME"/>
+  </bean>
+  <bean id="applicationKey" class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean">
+    <property name="staticField" value="com.atlassian.bamboo.plugin.BambooPluginUtils.BAMBOO_APPLICATION_KEY"/>
+  </bean>
+
+  <bean id="pluginDirectory" class="com.atlassian.bamboo.fileserver.SystemDirectory" factory-method="getPluginDirectory" scope="prototype"/>
+  <bean id="pluginCacheDirectory" class="com.atlassian.bamboo.fileserver.SystemDirectory" factory-method="getPluginCacheDirectory" scope="prototype"/>
+
+  <bean id="characterEncoding" class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean">
+    <property name="staticField" value="com.atlassian.bamboo.plugin.servlet.FileServerServlet.DEFAULT_CHARACTER_ENCODING"/>
+  </bean>
+</beans>

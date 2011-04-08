@@ -1,0 +1,116 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: atlassian
+Build-Jdk: 1.6.0_17
+Class-Path: sal-api-2.4.1.jar applinks-api-3.4-beta4.jar applinks-host
+ -3.4-beta4.jar applinks-spi-3.4-beta4.jar atlassian-bamboo-web-3.1-m3
+ .jar atlassian-bamboo-core-3.1-m3.jar atlassian-bamboo-api-3.1-m3.jar
+  atlassian-extras-2.4.jar log4j-1.2.15.jar commons-codec-1.4.jar atla
+ ssian-core-4.5.3.jar atlassian-profiling-1.8.1.jar slf4j-api-1.5.8.ja
+ r junit-4.5.jar commons-io-1.4-backport-IO-168.jar commons-lang-2.5.j
+ ar propertyset-1.3-21Nov03.jar sitemesh-2.2.1.jar dom4j-1.4.jar xml-a
+ pis-1.3.03.jar jaxen-1.0-FCS.jar saxpath-1.0-FCS.jar msv-20020414.jar
+  relaxngDatatype-20020414.jar isorelax-20020414.jar oscore-2.2.7.jar 
+ mail-1.4.1.jar activation-1.1.1.jar atlassian-config-0.9.jar atlassia
+ n-spring-1.3.jar atlassian-event-2.1.0.jar atlassian-util-concurrent-
+ 2.0.0.jar spring-core-2.0.7.jar spring-context-2.0.7.jar aopalliance-
+ 1.0.jar spring-beans-2.0.7.jar spring-web-2.0.7.jar spring-hibernate2
+ -2.0.7.jar hibernate-2.1.8-atlassian-9.jar spring-dao-2.0.7.jar sprin
+ g-jdbc-2.0.7.jar atlassian-johnson-1.0.jar atlassian-seraph-2.5.0.jar
+  atlassian-secure-random-2.2.jar atlassian-cookie-tools-2.0.jar atlas
+ sian-processutils-1.5-beta7.jar atlassian-plugins-core-2.7.3.jar mult
+ itenant-core-1.0-m14.jar servlet-api-2.5.jar jcip-annotations-1.0.jar
+  cglib-nodep-2.1_3.jar atlassian-plugins-servlet-2.7.3.jar atlassian-
+ plugins-webfragment-2.7.3.jar atlassian-plugins-webresource-2.7.3.jar
+  atlassian-plugins-osgi-2.7.3.jar atlassian-plugins-osgi-events-2.7.3
+ .jar bndlib-0.0.255.jar org.apache.felix.framework-3.0.2.jar package-
+ scanner-0.9.5.jar atlassian-plugins-spring-2.7.3.jar spring-aop-2.0.7
+ .jar atlassian-bandana-3.1.jar atlassian-cache-api-1.0.jar xstream-1.
+ 3.1.jar xpp3_min-1.1.4c.jar plexus-utils-1.5.9.jar slf4j-log4j12-1.5.
+ 8.jar jcl-over-slf4j-1.5.8.jar atlassian-user-1.9.jar spring-mock-2.0
+ .7.jar ldaptemplate-1.0.1.jar ehcache-1.6.0-atlassian-3.jar odmg-3.0.
+ jar jta-1.0.1B.jar atlassian-bucket-0.17.jar atlassian-bonnie-3.4.1.j
+ ar lucene-core-2.3.2.jar commons-beanutils-1.8.3.jar pdfbox-1.2.1.jar
+  fontbox-1.2.1.jar jempbox-1.2.1.jar poi-3.5-FINAL.jar poi-scratchpad
+ -3.5-FINAL.jar bcprov-jdk15-1.44.jar bcmail-jdk15-1.44.jar icu4j-3.8.
+ jar xwork-1.2.5-atlassian-2.jar javassist-3.6.ga.jar rife-continuatio
+ ns-0.0.2.jar rome-1.0.jar jdom-1.0.jar spring-support-2.0.7.jar lucen
+ e-analyzers-2.3.2.jar hsqldb-1.8.0.7.jar jira-soapclient-4.0.jar sal-
+ spi-2.4.1.jar sal-spring-2.4.1.jar ant-1.7.1.jar ant-launcher-1.7.1.j
+ ar quartz-1.6.5.jar guava-8.1.jar commons-collections-3.2.1.jar commo
+ ns-configuration-1.4.jar commons-digester-1.8.jar commons-jxpath-1.2.
+ jar smackx-3.0.4.jar smack-3.0.4.jar jmock-1.0.1.jar joda-time-1.6.ja
+ r osuser-1.0-20060106.jar commons-logging-1.0.4.jar atlassian-trusted
+ -apps-seraph-integration-2.3.2.jar atlassian-trusted-apps-core-2.3.2.
+ jar atlassian-mail-1.22.jar mockobjects-alt-jdk1.3-j2ee1.3-0.09.jar a
+ cegi-security-1.0.4.jar oro-2.0.8.jar annotations-6.0.5.jar atlassian
+ -aws-0.18-beta4.jar aws-java-sdk-1.1.5.jar commons-httpclient-3.0.1.j
+ ar stax-api-1.0.1.jar typica-1.6.jar jaxb-impl-2.1.10.jar jaxb-api-2.
+ 1.jar stax-api-1.0-2.jar axis-1.4.jar axis-jaxrpc-1.4.jar axis-saaj-1
+ .4.jar axis-wsdl4j-1.5.1.jar commons-discovery-0.2.jar atlassian-velo
+ city-0.5.jar velocity-1.4.jar exml-7.0.jar freemarker-2.3.16-atlassia
+ n-5.jar emma-2.0.4217.jar commons-jelly-tags-regexp-1.0.jar regexp-1.
+ 3.jar jsp-api-2.1.jar jython-2.1.jar logkit-1.2.jar javarebel-sdk-1.2
+ .2.jar js-1.7R2.jar javacvs-atlassian-20080407.jar spring-jms-2.0.7.j
+ ar commons-pool-1.4-RC2-atlassian-1.jar spring-remoting-2.0.7.jar p4j
+ ava-0.7.5-atlassian-5.8.jar aspectjrt-1.6.9.jar aspectjweaver-1.6.9.j
+ ar svnkit-1.3.5.7539.jar jna-3.2.7.jar trilead-ssh2-build213-svnkit-1
+ .3-patch.jar sqljet-1.0.4.jar antlr-runtime-3.1.3.jar stringtemplate-
+ 3.2.jar antlr-2.7.7.jar trilead-ssh2-build213-svnkit-1.3-patch.jar js
+ ch-0.1.38.jar webwork-2.2.7-atlassian-5.jar ognl-2.7.3-atlassian-3.ja
+ r xercesImpl-2.9.1.jar atlassian-xwork-12-1.12.jar atlassian-xwork-co
+ re-1.12.jar activemq-core-5.4.2.jar geronimo-jms_1.1_spec-1.1.1.jar a
+ ctiveio-core-3.1.2.jar geronimo-j2ee-management_1.1_spec-1.0.1.jar ka
+ hadb-5.4.2.jar activemq-protobuf-1.1.jar jasypt-1.6.jar lingo-1.3.jar
+  backport-util-concurrent-2.1.jar geronimo-j2ee-connector_1.5_spec-1.
+ 0.jar xbean-spring-3.2.jar jms-1.1.jar atlassian-bamboo-persistence-3
+ .1-m3.jar c3p0-0.9.1.2.jar atlassian-bamboo-migration-3.1-m3.jar true
+ zip-6.6.jar woodstox-core-asl-4.0.7.jar stax2-api-3.0.1.jar staxmate-
+ 2.0.0.jar atlassian-bamboo-language-3.1-m3.jar atlassian-bamboo-chart
+ s-3.1-m3.jar jfreechart-1.0.9.jar jcommon-1.0.12.jar atlassian-bamboo
+ -upgrader-3.1-m3.jar atlassian-bamboo-license-3.1-m3.jar atlassian-ba
+ mboo-agent-classserver-3.1-m3.jar atlassian-bamboo-agent-remote-3.1-m
+ 3.jar atlassian-bamboo-agent-bootstrap-3.1-m3.jar atlassian-bamboo-ag
+ ent-core-3.1-m3.jar activemq-ra-5.4.2.jar activemq-pool-5.4.2.jar jen
+ cks-2.1.jar geronimo-transaction-2.0.1.jar geronimo-jta_1.1_spec-1.0.
+ jar howl-1.0.1-1.jar geronimo-connector-2.0.1.jar xapool-without-pool
+ -1.4.jar commons-dbcp-1.2.jar atlassian-bamboo-agent-elastic-3.1-m3.j
+ ar atlassian-tunnel-0.5.jar xfire-core-1.2.6.jar wsdl4j-1.6.1.jar Xml
+ Schema-1.1.jar atlassian-bamboo-agent-local-3.1-m3.jar atlassian-bamb
+ oo-agent-elastic-server-3.1-m3.jar pjl-comp-filter-1.4.jar commons-fi
+ leupload-1.2.2.jar urlrewrite-2.6.0.jar velocity-tools-1.2.jar crowd-
+ integration-client-2.0.7.jar xfire-aegis-1.2.6.jar stax-utils-2004091
+ 7.jar xfire-java5-1.2.6.jar xfire-annotations-1.2.6.jar commons-attri
+ butes-api-2.1.jar qdox-1.2.jar xfire-jsr181-api-1.0-M1.jar maven-embe
+ dder-2.0.4-atlassian-2.jar maven-core-2.0.9.jar maven-settings-2.0.9.
+ jar maven-model-2.1.0.jar plexus-container-default-1.0-alpha-9-stable
+ -1.jar classworlds-1.1.jar wagon-file-1.0-beta-2.jar wagon-provider-a
+ pi-1.0-beta-2.jar maven-plugin-parameter-documenter-2.0.9.jar wagon-w
+ ebdav-1.0-beta-2.jar slide-webdavlib-2.1.jar xml-im-exporter-1.1.jar 
+ wagon-http-lightweight-1.0-beta-2.jar wagon-http-shared-1.0-beta-2.ja
+ r jtidy-4aug2000r7-dev.jar maven-reporting-api-2.0.9.jar doxia-sink-a
+ pi-1.0-alpha-10.jar maven-profile-2.0.9.jar maven-artifact-2.0.9.jar 
+ maven-repository-metadata-2.0.9.jar maven-error-diagnostics-2.0.9.jar
+  maven-project-2.0.9.jar maven-artifact-manager-2.0.9.jar maven-plugi
+ n-registry-2.0.9.jar commons-cli-1.0.jar maven-plugin-api-2.0.9.jar w
+ agon-ssh-external-1.0-beta-2.jar wagon-ssh-common-1.0-beta-2.jar plex
+ us-interactivity-api-1.0-alpha-4.jar maven-plugin-descriptor-2.0.9.ja
+ r maven-monitor-2.0.9.jar wagon-ssh-1.0-beta-2.jar jcaptcha-1.0.jar j
+ captcha-api-1.0.jar imaging-01012005.jar atlassian-bamboo-plugin-auto
+ favourite-3.1-m3.jar atlassian-bamboo-plugin-clover-3.1-m3.jar atlass
+ ian-bamboo-plugin-grails-3.1-m3.jar clover-3.0.1.jar atlassian-bamboo
+ -plugin-phpbuilder-3.1-m3.jar atlassian-bamboo-plugin-vcsversion-3.1-
+ m3.jar atlassian-bamboo-plugin-labeller-3.1-m3.jar atlassian-bamboo-p
+ lugin-buildnumberstamper-3.1-m3.jar atlassian-bamboo-plugin-maven2-3.
+ 1-m3.jar atlassian-bamboo-plugin-maven-3.1-m3.jar atlassian-bamboo-pl
+ ugin-ant-3.1-m3.jar atlassian-bamboo-plugin-testresultparser-3.1-m3.j
+ ar atlassian-bamboo-plugin-scripttask-3.1-m3.jar atlassian-bamboo-plu
+ gin-php-3.1-m3.jar atlassian-bamboo-plugin-fisheyecommitviewer-3.1-m3
+ .jar atlassian-bamboo-plugin-dummytask-3.1-m3.jar atlassian-bamboo-pl
+ ugin-compatibility-task-3.1-m3.jar atlassian-bamboo-plugin-triggercon
+ dition-3.1-m3.jar nant_builder-3.0.2.jar atlassian-bamboo-plugin-git-
+ 1.3.jar bamboo-maven-artifact-sharing-plugin-3.0-rc1.jar atlassian-ba
+ mboo-plugin-mercurial-3.1-m3.jar sshd-core-0.5.0.jar mina-core-2.0.1.
+ jar
+
