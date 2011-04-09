@@ -1,1 +1,0 @@
-jQuery.namespace=function(F,B){var C,A=F.split("."),E=window,D=false;if(/[^a-zA-Z.]/.test(F)){return false}for(C=0;C<A.length;C++){if(!E[A[C]]){E[A[C]]={};D=true}E=E[A[C]]}if(!!B){return D}return true};

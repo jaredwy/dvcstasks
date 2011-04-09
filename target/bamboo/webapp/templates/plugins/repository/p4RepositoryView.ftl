@@ -1,5 +1,0 @@
-[@ww.label labelKey='repository.p4.port' value='${plan.buildDefinition.repository.port}' /]
-[@ww.label labelKey='repository.p4.client' value='${plan.buildDefinition.repository.client}' /]
-[@ww.label labelKey='repository.p4.depot' value='${plan.buildDefinition.repository.depot}' /]
-[@ww.label labelKey='repository.p4.username' value='${plan.buildDefinition.repository.user}' /]
-[@ww.label labelKey='repository.p4.manageWorkspace' value='${plan.buildDefinition.repository.manageWorkspace?string}' /]

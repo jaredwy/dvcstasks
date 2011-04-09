@@ -1,5 +1,0 @@
-[@ww.label labelKey='builder.maven2.capability.configuration.useLocalRepositoryIsolation' escape="false"]
-    [@ww.param name='value' ]
-        [@ui.displayYesOrNo configuration.useLocalRepositoryIsolation /]
-    [/@ww.param]
-[/@ww.label]
